@@ -1,0 +1,7 @@
+{
+  "name": "monitor_poltrona",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
