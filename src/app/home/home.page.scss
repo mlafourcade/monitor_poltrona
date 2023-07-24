@@ -161,7 +161,8 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   width: 245px;
 }
 .app-page-button{
-  background-color:#1DE5D6;
+  background-color: #1DE5D6;
+  background-image: linear-gradient(180deg, #1DE5D6 0%, #309FE5 100%);
   bottom: 311px;
   height: 154px;
   width: 190px;
@@ -169,13 +170,14 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   position: absolute;
   right: 102px;
   top: 135px;
-  filter:drop-shadow(0px 25px 30px rgba(0.11372549086809158,0.8901960849761963,0.8392156958580017,0.5));
+  filter:drop-shadow(0px 10px 10px #1e817a); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
   //transform:rotate(-0deg);
   border-radius:8px 64px 8px 8px;
   padding:0px;
 }
 .pesq-page-button{
   background-color: #B1C95C;
+  background-image: linear-gradient(180deg, #B1C95C 0%, #3ABF90 100%);
   bottom: 135px;
   height: 154px;
   left: 732px;
@@ -183,7 +185,7 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   right: 102px;
   top: 311px;
   width: 190px;
-  filter:drop-shadow(0px 25px 30px rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5));
+  filter:drop-shadow(0px 10px 10px #63761f); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
   //transform:rotate(-0deg);
   border-radius:8px;
   padding:0px;
@@ -193,6 +195,7 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   height: 154px;
   left: 430px;
   position: absolute;
+  filter:drop-shadow(0px 10px 10px #2a216e); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
   right: 314px;
   top: 135px;
   width: 280px;
@@ -202,6 +205,7 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   height: 154px;
   left: 430px;
   position: absolute;
+  filter:drop-shadow(0px 10px 10px #5a6b1d); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
   right: 314px;
   top: 311px;
   width: 280px;
@@ -257,20 +261,6 @@ $font_type_03: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
   letter-spacing: 0px;
   position: absolute;
   width: 100px;
-}
-.pesq-page-button{
-  background-color: #B1C95C;
-  bottom: 135px;
-  height: 154px;
-  left: 732px;
-  position: absolute;
-  right: 102px;
-  top: 311px;
-  width: 190px;
-  filter:drop-shadow(0px 25px 30px rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5));
-  //transform:rotate(-0deg);
-  border-radius:8px;
-  padding:0px;
 }
 .clima{
   background-color:#414141;
