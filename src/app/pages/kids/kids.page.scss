@@ -1,0 +1,61 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;   //Tira a bolinha do inicio do item da lista
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+a {
+    text-decoration: none;  //Links sublinhados
+    color: white;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.menu {
+    display: flex;    
+}
+.menu li {
+    margin-left: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/*CSS Flexbox*/
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+p {
+    color: white;
+}
+div > img {
+    max-width: 132px;
+    display: block;
+}
+.flex-style {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-style > div{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 150px; //mínimo aceitavel
+}
+.toolbox-style {
+    color: white;
+    display: block;
+    //border: 1px solid #fff;
+}
+.img-main {
+    color: white;
+    display: block;
+    border-radius: 5%;
+}
