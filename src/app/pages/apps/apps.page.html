@@ -1,163 +1,300 @@
 <body>
-  <ion-header class="header" [translucent]="true">
-    <a routerLink="/home">Home</a>
-    <img src="../../assets/logoOrbe.svg"/>
-    <nav>
-      <ul class="menu">
-        <li><a href="/">Sobre</a></li>
-        <li><a href="/">Produtos</a></li>
-        <li><a href="/">Contato</a></li>
-      </ul>
-    </nav>
+  <ion-header class="flex-header" [translucent]="true">
+    <div class="flex-header-area">
+      <div class="flex-header-area_start">
+        <div class="flex-item">
+          <a routerLink="/home">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex-header-area">
+      <div class="flex-header-area_center">
+        <div class="flex-item">
+          <img class="img-logo" src="../../assets/logoOrbe.svg"/>
+        </div>
+      </div>
+    </div>
+    <div class="flex-header-area">
+      <div class="flex-header-area_end">
+        <div class="flex-item">
+          <ul class="menu">
+            <li><a href="/">Sobre</a></li>
+            <li><a href="/">Produtos</a></li>
+            <li><a href="/">Contato</a></li>
+          </ul>
+        </div> 
+      </div>
+    </div>
   </ion-header>  
   <main>
     <section class="toolbox-style">
       Toolbox-style
     </section>
     <section class="img-main">
-      <img style="border-radius:8px" src="../../assets/Avatar2_1x.svg"/>
+      <img style="border-radius:8px" src="../../assets/AvatarPanel.svg"/>
     </section>
-    <section class="toolbox-style">
+    <section class="toolbox-style type-text-style">
       Filmes
     </section>
-    <section class="container">
-      <div class="flex-item">
-        <img src="../../assets/culpadasestrelas.svg"/>
-        <p>
-          legenda
-        </p>      
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/barracadobeijo.svg"/>
-        <p>
-          legenda
-        </p>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/infiltrado.svg"/>
-        <p>
-          legenda
-        </p>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">          
-        <img src="../../assets/avatar.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/guardioesdagalaxia.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/inferno.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/flash.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>  
     </section>
-    <section class="toolbox-style">
+    <section class="toolbox-style type-text-style">
       Series
     </section>
-    <section class="container">
-      <div class="flex-item">
-        <img src="../../assets/vandinha.svg"/>
-        <p>
-          legenda
-        </p>      
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/vandinha.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Wandinha
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/blackmirror.svg"/>
-        <p>
-          legenda
-        </p>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/blackmirror.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Black Mirror
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/jackryan.jpg"/>
-        <p>
-          legenda
-        </p>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/jackryan.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Jack Ryan
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">          
-        <img src="../../assets/thewalkingdead.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/simpsons.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/invasaosecreta.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/blackmirror.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-    </section>  
-    <section class="toolbox-style">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/thewalkingdead.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            The Walking Dead
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/simpsons.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Simpsons
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/invasaosecreta.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Invasão Secreta
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/house.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            House
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>  
+    </section>
+    <section class="toolbox-style type-text-style">
       Músicas
     </section>
-    <section class="container">
-      <div class="flex-item">
-        <img src="../../assets/metallica.jpg"/>
-        <p>
-          legenda
-        </p>      
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/metallica.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Metallica
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/mariahcarey.jpg"/>
-        <p>
-          legenda
-        </p>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/mariahcarey.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Mariah Carey
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">
-        <img src="../../assets/mickaeljackson.jpg"/>
-        <p>
-          legenda
-        </p>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/mickaeljackson.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Michael Jackson
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
       </div>
-      <div class="flex-item">          
-        <img src="../../assets/cooldplay.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/readhotchilipeppers.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/invasaosecreta.jpg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-      <div class="flex-item">
-        <img src="../../assets/blackmirror.svg"/>
-        <p>
-          legenda
-        </p>
-      </div>
-    </section>  
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/cooldplay.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Coldplay
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/readhotchilipeppers.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Red Hot Chili Peppers
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>      
+    </section>
   </main>
 </body>
 
