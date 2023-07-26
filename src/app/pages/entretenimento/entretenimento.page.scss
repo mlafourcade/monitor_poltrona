@@ -1,9 +1,50 @@
 .container-grid {
-    display:grid;
+    width: 100%;
+    height: 100%;
 }
 .item {
-    background-color: #048;
-    color:#fff;
-    border:1px solid #000;
-    text-align:center;
+    // background-color: #048;
+    // color:#fff;
+    // border:1px solid #000;
+    // text-align:center;
+}
+.toolbar-style {
+    display:grid;
+}
+.main-style {
+    display:grid;
+    grid-template-columns: 20% 80%;
+    //grid-template-rows: 10% 90%;
+    align-items: stretch; //o conteudo se alonga
+}
+.template-style {
+    width: 100%;
+    height: 100%;
+
+    display:grid;
+    //grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 70% 20%;
+    align-items: stretch; //stretch= o conteudo se alonga (default)
+}
+
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.footer-style {
+    display:grid;
+}
+.aside-style {
+    display:grid;
+}
+.article-style {
+    display:grid;
 }
