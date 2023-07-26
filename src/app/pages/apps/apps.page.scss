@@ -12,7 +12,7 @@ a {
 main {
     padding: 0.5%;
 }
-$font_type_0: 700 16px/1.17 "Roboto", Helvetica, Arial, serif;
+$font_type_0: 500 15px/1.17 "Roboto", Helvetica, Arial, serif;
 .name-text-style {
     margin-top: 8%;
     margin-bottom: 8%;
@@ -26,7 +26,7 @@ $font_type_1: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
     color: white;
     font: $font_type_1;
 }
-$font_type_2: 700 24px/1.17 "Roboto", Helvetica, Arial, serif;
+$font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
 .type-text-style {
     text-decoration: none;  //Links sublinhados
     color: white;
@@ -75,7 +75,8 @@ $font_type_2: 700 24px/1.17 "Roboto", Helvetica, Arial, serif;
     flex: 1, 1, auto;   //flex-grow + flex-shrink + flex-basis
 }
 .menu {
-    display: flex;    
+    display: flex;
+    //background-color: #447;    
 }
 .menu li {
     margin-left: 10px;
@@ -86,9 +87,44 @@ $font_type_2: 700 24px/1.17 "Roboto", Helvetica, Arial, serif;
 }
 .toolbox-style {
     //border: 1px solid #fff;
-    padding: 0px 0px 10px 10px;
+    padding: 0px 20px 10px 10px;
     color: white;
-    display: block;
+    display: flex;
+    max-width: 980px;
+    //border: 1px solid #fff;
+    //display: flex;
+    justify-content: space-between;
+    //flex-flow: row nowrap; //flex-direction + flex-wrap
+    //max-width: 980px;
+}
+.flex-toolbox-area {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+.flex-toolbox-area_start {
+    //border: 1px solid #fff;
+    display: flex;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+}
+$font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
+.flex-toolbox-area_center {
+    //border: 1px solid #fff;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    font: $font_type_5;
+}
+.flex-toolbox-area_end {
+    //border: 1px solid #fff;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    margin-right: 1%;
 }
 .flex-container {
     //border: 1px solid #fff;
@@ -100,6 +136,7 @@ $font_type_2: 700 24px/1.17 "Roboto", Helvetica, Arial, serif;
 .img-main {
     padding-left: 10px;
     padding-bottom: 1.5%;
+    padding-top: 0.6%;
     border-radius: 5%;
     display: block;
 }
@@ -147,4 +184,32 @@ $font_type_2: 700 24px/1.17 "Roboto", Helvetica, Arial, serif;
     color: white;
     text-align: left;
     justify-content: start;
+}
+$font_type_4: 600 12px "Roboto", Helvetica, Bold, serif;
+.toolbar_button_item {
+    margin: 1%;
+    text-align: center;
+    font: $font_type_4;
+    color: #fff;
+}
+$font_type_6: 400 14px/1.17 "Roboto", Helvetica, Bold, serif;
+.select-box-text {
+    font: $font_type_6;
+}
+.flex-logo-position {
+    width: 5%;
+    position: relative;
+    bottom: 128px;
+    left: -900px;
+    overflow: 'hidden';
+}
+ion-icon {
+    font-size: 30px;
+}
+.flex-link {
+    display: flex;
+    align-items: center;
+}
+.flex-icon-pos {
+    margin-bottom: 5%;
 }

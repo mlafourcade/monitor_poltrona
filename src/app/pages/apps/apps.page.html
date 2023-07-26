@@ -3,7 +3,16 @@
     <div class="flex-header-area">
       <div class="flex-header-area_start">
         <div class="flex-item">
-          <a routerLink="/home">Home</a>
+          <ion-buttons slot="secondary">
+            <div class="flex-link">
+              <div class="flex-icon-pos">
+                <ion-button routerLink="/home">
+                  <ion-icon slot="icon-only" name="home"></ion-icon>
+                </ion-button>
+              </div>
+              <a routerLink="/home">Início</a>
+            </div>
+          </ion-buttons>
         </div>
       </div>
     </div>
@@ -18,9 +27,7 @@
       <div class="flex-header-area_end">
         <div class="flex-item">
           <ul class="menu">
-            <li><a href="/">Sobre</a></li>
-            <li><a href="/">Produtos</a></li>
-            <li><a href="/">Contato</a></li>
+            <li><a>11:40 AM</a></li>
           </ul>
         </div> 
       </div>
@@ -28,13 +35,33 @@
   </ion-header>  
   <main>
     <section class="toolbox-style">
-      Toolbox-style
+      <div class="flex-toolbox-area">
+        <div class="flex-toolbox-area_start type-text-style">
+          Mídias
+        </div>
+        <div class="flex-toolbox-area_center">
+          Todas as categorias
+        </div>
+        <div class="flex-toolbox-area_end">
+          <ion-button class="toolbar_button_item" shape="round" color="danger" strong="true">Todos</ion-button>
+          <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Filmes</ion-button>
+          <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Series</ion-button>
+          <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Documentários</ion-button>
+          <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Músicas</ion-button>
+        </div>       
+      </div>
     </section>
     <section class="img-main">
       <img style="border-radius:8px" src="../../assets/AvatarPanel.svg"/>
+      <img class="flex-logo-position" src="../../assets/logoOrbeRed.svg"/>
     </section>
-    <section class="toolbox-style type-text-style">
-      Filmes
+    <section class="toolbox-style">
+      <div class="type-text-style">
+        Filmes
+      </div>
+      <div class="select-box-text">
+        Ver todos
+      </div>
     </section>
     <section class="flex-container">
       <div class="flex-format-item">
@@ -130,7 +157,12 @@
       </div>  
     </section>
     <section class="toolbox-style type-text-style">
-      Series
+      <div class="type-text-style">
+        Séries
+      </div>
+      <div class="select-box-text">
+        Ver todos
+      </div>
     </section>
     <section class="flex-container">
       <div class="flex-format-item">
@@ -226,7 +258,12 @@
       </div>  
     </section>
     <section class="toolbox-style type-text-style">
-      Músicas
+      <div class="type-text-style">
+        Músicas
+      </div>
+      <div class="select-box-text">
+        Ver todos
+      </div>
     </section>
     <section class="flex-container">
       <div class="flex-format-item">
