@@ -1,4 +1,372 @@
 <body>
+  <ion-header class="flex-header" [translucent]="true">
+    <div class="flex-header-area">
+      <div class="flex-header-area_start">
+        <div class="flex-item">
+          <ion-buttons slot="secondary">
+            <div class="flex-link">
+              <div class="flex-icon-pos">
+                <ion-button routerLink="/home">
+                  <ion-icon slot="icon-only" name="home"></ion-icon>
+                </ion-button>
+              </div>
+              <a routerLink="/home">Início</a>
+            </div>
+          </ion-buttons>
+        </div>
+      </div>
+    </div>
+    <div class="flex-header-area">
+      <div class="flex-header-area_center">
+        <div class="flex-item">
+          <img class="img-logo" src="../../assets/logoOrbe.svg"/>
+        </div>
+      </div>
+    </div>
+    <div class="flex-header-area">
+      <div class="flex-header-area_end">
+        <div class="flex-item">
+          <ul class="menu">
+            <li><a>11:40 AM</a></li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </ion-header>  
+  <main>
+    <section class="toolbox-style">
+      <div class="flex-toolbox-area">
+        <div class="flex-toolbox-area_start type-text-style">
+          Mídias
+        </div>
+        <div class="flex-toolbox-area_center">
+          <ion-list>
+            <ion-item>
+              <ion-select 
+                [interfaceOptions]="customAlertOptions" 
+                interface="popover"
+                (ionChange)="handleChange($event)"
+                placeholder="Todas as categorias">
+                <ion-select-option *ngFor="let categorie of categories" [value]="categorie">{{ categorie.name }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>        
+        </div>
+        <div class="flex-toolbox-area_end">
+          <button class="watch-button-red" routerLink="/entretenimento">Todos</button>
+          <button class="watch-button-outline" routerLink="/media/movies">Filmes</button>
+          <button class="watch-button-outline" routerLink="/media/series">Séries</button>
+          <button class="watch-button-outline" routerLink="/media/documentaries">Documentários</button>
+          <button class="watch-button-outline" routerLink="/media/music">Músicas</button>
+        </div>       
+      </div>
+    </section>
+    <section class="img-main">
+      <img style="border-radius:8px" src="../../assets/AvatarPanel.svg"/>
+      <img class="flex-logo-position" src="../../assets/logoOrbeRed.svg"/>
+    </section>
+    <section class="toolbox-style">
+      <div class="type-text-style">
+        Filmes
+      </div>
+      <div class="select-box-text" routerLink="/media">
+        Ver todos
+      </div>
+    </section>
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>  
+    </section>
+    <section class="toolbox-style type-text-style">
+      <div class="type-text-style">
+        Séries
+      </div>
+      <div class="select-box-text" routerLink="/media">
+        Ver todos
+      </div>
+    </section>
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/vandinha.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Wandinha
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/blackmirror.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Black Mirror
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/jackryan.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Jack Ryan
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/thewalkingdead.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            The Walking Dead
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/simpsons.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Simpsons
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/invasaosecreta.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Invasão Secreta
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/house.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            House
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>  
+    </section>
+    <section class="toolbox-style type-text-style">
+      <div class="type-text-style">
+        Músicas
+      </div>
+      <div class="select-box-text">
+        Ver todos
+      </div>
+    </section>
+    <section class="flex-container">
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/metallica.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Metallica
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/mariahcarey.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Mariah Carey
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/mickaeljackson.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Michael Jackson
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/cooldplay.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Coldplay
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>      
+      <div class="flex-format-item">
+        <div class="flex-item-img">
+          <img src="../../assets/readhotchilipeppers.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Red Hot Chili Peppers
+          </p>      
+          <p class="info-text-style">
+            45 min
+          </p>      
+        </div>
+      </div>      
+    </section>
+  </main>
+</body>
+
+
+
+
+
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>apps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">apps</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+
+
+
+<!-- <body>
   <header>
     <a>
       Header
@@ -68,4 +436,4 @@
       </div>
     </section>
   </main>
-</body>
+</body> -->
