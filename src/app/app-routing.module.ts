@@ -28,13 +28,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/apps/apps.module').then( m => m.AppsPageModule)
   },
   {
-    path: 'media',
-    loadChildren: () => import('./pages/media/media.module').then( m => m.MediaPageModule)
-  },
-  {
     path: 'playback',
     loadChildren: () => import('./pages/playback/playback.module').then( m => m.PlaybackPageModule)
   },
+  { 
+    path: 'media/:type', 
+    loadChildren: () => import('./pages/media/media.module').then( m => m.MediaPageModule)
+  },  
 ];
 
 @NgModule({

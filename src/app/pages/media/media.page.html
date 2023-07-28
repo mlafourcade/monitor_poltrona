@@ -37,7 +37,7 @@
     <section class="toolbox-style">
       <div class="flex-toolbox-area">
         <div class="flex-toolbox-area_start type-text-style">
-          Filmes
+          {{windowTitle}}
         </div>
         <div class="flex-toolbox-area_center">
           <ion-list>
@@ -53,11 +53,11 @@
           </ion-list>        
         </div>
         <div class="flex-toolbox-area_end">
-          <button class="watch-button-outline" routerLink="/apps">Todos</button>
-          <button class="watch-button-red" routerLink="/media">Filmes</button>
-          <button class="watch-button-outline" routerLink="/media">Séries</button>
-          <button class="watch-button-outline" routerLink="/media">Documentários</button>
-          <button class="watch-button-outline" routerLink="/media">Músicas</button>
+          <button id="all" class="watch-button-red" routerLink="/entretenimento">Todos</button>
+          <button id="movies" class="watch-button-outline" routerLink="/media/movies">Filmes</button>
+          <button id="series" class="watch-button-outline" routerLink="/media/series">Séries</button>
+          <button id="documentaries" class="watch-button-outline" routerLink="/media/documentaries">Documentários</button>
+          <button id="music" class="watch-button-outline" routerLink="/media/music">Músicas</button>
         </div>       
       </div>
     </section>
