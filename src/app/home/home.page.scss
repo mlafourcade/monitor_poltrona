@@ -8,48 +8,96 @@ $font_type_3: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
 $font_type_4: 400 14px/1.18 "Roboto", Helvetica, Bold, serif;
 $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
 
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;   //Tira a bolinha do inicio do item da lista
+  font-size: 1.2rem;
+  font-family: Arial;
+  background-color: #000;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+a {
+  text-decoration: none;  //Links sublinhados
+  color: white;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
 #main_style {
   color: #fff;
 }
-
-.flex_item{
+.menu {
+  display: flex;
+  //background-color: #447;    
+}
+.menu li {
+  margin-left: 10px;
+}
+.menu li a {
+  display: block;
+  padding: 10px;
+}
+.flex-header {
+  //border: 1px solid #fff;
+  display: flex;
+  //justify-content: start;
+  flex-flow: row nowrap; //flex-direction + flex-wrap
+  max-width: 980px;
+}
+.flex-header-area {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+}
+.flex-header-area_start {
+  //border: 1px solid #fff;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  margin-left: 5%;
+}
+.flex-header-area_center {
+  //border: 1px solid #fff;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.flex-header-area_end {
+  //border: 1px solid #fff;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  margin-right: 5%;
+}
+.flex-link {
+  display: flex;
+  align-items: center;
+}
+.flex-icon-pos {
+  margin-bottom: 5%;
+}
+.img-logo {
+  width: 80px;
+  display: block;
+}
+.flex-item > img {
+  max-width: 132px;
+  border-radius: 5%;
+}
+.flex-item-img > img {
+  max-width: 132px;
+  border-radius: 5%;
+}
+.flex-item {
   margin: 5px;
   padding: 5px;
-  text-align: center;
+  color: white;
   font-size: 1em;
-  color: #fff;
-  flex-grow: 1; //redimensiona o item dentro do container (depende do conteudo). Por padrão é 0
-  flex-basis: auto; //redimensiona o item dentro do container (não depende do conteudo). Por padrão é auto
-  flex-shrink: 1; //não permite que o container reduza o tamanho do item pra caber no espaço. Padrão 1
+  font-family: Arial, Helvetica, sans-serif;
+  //background-color: #447;
+  text-align: center;
+  flex: 1, 1, 200px;   //flex-grow + flex-shrink + flex-basis
 }
-
 .flex_container{ //propriedades de container
   height: 10%;
   margin: 0 auto;
@@ -58,21 +106,17 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   flex-wrap: nowrap; //não quebra a linha. Item que não cabe, vai para baixo 
   justify-content: center; //alinha os itens (divs) no main axis. Por padrão é start (no inicio da linha)
   align-items: stretch; //alinha os itens (divs) no cross axis. Por padrão é stretch (do alto da coluna até embaixo)
-  background-color: var(--app-background-color);
 }
-
 .flex_right_align{
   font-family: roboto;
   margin-right: 10%;
   display: flex; 
   justify-content: flex-end; 
 }
-
 .main_container{ //propriedades de container
   height: 100%;
-  background-color: var(--app-background-color);
+  background-color: #000;
 }
-
 .toolbar_container{ //propriedades de container
   height: 10%;
   margin-right: 2%;
@@ -81,9 +125,8 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   flex-wrap: nowrap; //não quebra a linha. Item que não cabe, vai para baixo 
   justify-content: flex-end; //alinha os itens (divs) no main axis. Por padrão é start (no inicio da linha)
   align-items: center; //alinha os itens (divs) no cross axis. Por padrão é stretch (do alto da coluna até embaixo)
-  background-color: var(--app-background-color);
+  background-color: #000;
 }
-
 .toolbar_button_item{
   margin: 20px;
   text-align: center;
@@ -91,15 +134,12 @@ $font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
   font-family:Arial;
   color: #fff;
 }
-
 .inicio{
   align-self: flex-start; 
 }
-
 .meio{
   align-self: center; 
 }
-
 .final{
   align-self: flex-end; 
 }

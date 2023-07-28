@@ -31,7 +31,7 @@ $font_orbe3: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
 .font-orbe3 {
     font: $font_orbe0;    
     text-align: right;
-    color: red;
+    color: #F5400E;
     background-color: #272626;
 }
 $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -40,7 +40,7 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     margin: 0px;  
     padding: 0;
     text-align: left;
-    color: red;
+    color: #F5400E;
 }
 .flex-header {
     display: flex;

@@ -91,13 +91,11 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
     color: white;
     display: flex;
     max-width: 980px;
-    //border: 1px solid #fff;
-    //display: flex;
     justify-content: space-between;
     //flex-flow: row nowrap; //flex-direction + flex-wrap
-    //max-width: 980px;
 }
 .flex-toolbox-area {
+    //border: 1px solid #fff;
     margin: 0 auto;
     display: flex;
     width: 100%;
@@ -105,7 +103,7 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
 .flex-toolbox-area_start {
     //border: 1px solid #fff;
     display: flex;
-    width: 50%;
+    padding-right: 20px;
     justify-content: start;
     align-items: center;
 }
@@ -113,7 +111,6 @@ $font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
 .flex-toolbox-area_center {
     //border: 1px solid #fff;
     display: flex;
-    width: 100%;
     justify-content: start;
     align-items: center;
     font: $font_type_5;
@@ -124,7 +121,6 @@ $font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
     width: 100%;
     justify-content: end;
     align-items: center;
-    margin-right: 1%;
 }
 .flex-container {
     //border: 1px solid #fff;
@@ -236,4 +232,25 @@ ion-select::part(text) {
 ion-select::part(icon) {
     color: whitesmoke;
     opacity: 1;
+}
+.watch-button-red {
+    background-color: #F5400E;
+    border-radius: 15px;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+.watch-button-outline {
+    background-color: #272626;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 14px;
+    cursor: pointer;
 }
