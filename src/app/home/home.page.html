@@ -1,63 +1,80 @@
 <body>
-  <ion-header>
-    <div class="flex_container">
-      <div class="flex_item"></div>
-      <div class="flex_item"></div>
-      <div class="flex_item"></div>
-      <div class="flex_item">
-        <img src="../../assets/logoOrbe.svg"/>
-      </div>
-      <div class="flex_item"></div>
-      <div class="flex_item"></div>
-      <div class="flex_item">
-        <div class="flex_right_align">
-          11:00 AM
+  <ion-header class="flex-header" [translucent]="true">
+    <div class="flex-header-area">
+      <div class="flex-header-area_start">
+        <div class="flex-item">
+          <ion-buttons slot="secondary">
+            <div class="flex-link">
+              <!-- <div class="flex-icon-pos">
+                <ion-button routerLink="/home">
+                  <ion-icon slot="icon-only" name="home"></ion-icon>
+                </ion-button>
+              </div> -->
+              <!-- <a routerLink="/home">Início</a> -->
+            </div>
+          </ion-buttons>
         </div>
       </div>
     </div>
-    </ion-header>
-    <ion-content>
-      <div class="main_container">
-        <button type="button" routerLink="/entretenimento">
-          <div class="entr-page-button">
-            <img style="border-radius:8px" src="../../assets/Entretenimento.svg"/>
-            <h1 class="text-pos-01">Entretenimento</h1>
-            <h1 class="text-pos-02">Filmes, Séries e Músicas</h1>  
-          </div>
-        </button>
-        <button type="button" routerLink="/kids">
-          <div class="kids-page-button">
-            <img  style="border-radius:8px" src="../../assets/image 81.png"/>
-            <h1 class="text-pos-01">kids</h1>
-            <h1 class="text-pos-02">Conteúdo para Crianças</h1>  
-          </div>
-      </button>
-        <button type="button" routerLink="/apps">
-          <div class="app-page-button">
-            <h1 class="text-pos-01">Apps</h1>
-            <h1 class="text-pos-02">Aplicativos disponíveis</h1>
-          </div>
-        </button>
-        <button type="button" routerLink="/pesquisa">          
-          <div class="pesq-page-button">
-            <h1 class="text-pos-01">Pesquisa</h1>
-            <h1 class="text-pos-02">Nos ajude a melhorar</h1>
-          </div>
-        </button>
-        <div class="clima"> 
-          <img style="border-radius: 100px" src="../../assets/image 80.svg"/>
-          <h1 class="text-pos-03">22°</h1>
-          <h5 class="text-pos2">Nublado</h5>
-          <h5 class="text-pos3">Porto Alegre</h5>
-        </div>
-        <img class="whether-img" src="../../assets/Nublado.svg"/>
-        <div>
-          <h1 class="hero_title">10:52</h1>
-          <h5 class="highlights">segunda-feira</h5>
-          <h5 class="highlights1">28 de agosto, 2023</h5>  
+    <div class="flex-header-area">
+      <div class="flex-header-area_center">
+        <div class="flex-item">
+          <img class="img-logo" src="../../assets/logoOrbe.svg"/>
         </div>
       </div>
-    </ion-content>
+    </div>
+    <div class="flex-header-area">
+      <div class="flex-header-area_end">
+        <div class="flex-item">
+          <ul class="menu">
+            <li><a>11:40 AM</a></li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </ion-header>  
+  <ion-content>
+    <div class="main_container">
+      <button type="button" routerLink="/entretenimento">
+        <div class="entr-page-button">
+          <img style="border-radius:8px" src="../../assets/Entretenimento.svg"/>
+          <h1 class="text-pos-01">Entretenimento</h1>
+          <h1 class="text-pos-02">Filmes, Séries e Músicas</h1>  
+        </div>
+      </button>
+      <button type="button" routerLink="/kids">
+        <div class="kids-page-button">
+          <img  style="border-radius:8px" src="../../assets/image 81.png"/>
+          <h1 class="text-pos-01">kids</h1>
+          <h1 class="text-pos-02">Conteúdo para Crianças</h1>  
+        </div>
+    </button>
+      <button type="button" routerLink="/apps">
+        <div class="app-page-button">
+          <h1 class="text-pos-01">Apps</h1>
+          <h1 class="text-pos-02">Aplicativos disponíveis</h1>
+        </div>
+      </button>
+      <button type="button" routerLink="/pesquisa">          
+        <div class="pesq-page-button">
+          <h1 class="text-pos-01">Pesquisa</h1>
+          <h1 class="text-pos-02">Nos ajude a melhorar</h1>
+        </div>
+      </button>
+      <div class="clima"> 
+        <img style="border-radius: 100px" src="../../assets/image 80.svg"/>
+        <h1 class="text-pos-03">22°</h1>
+        <h5 class="text-pos2">Nublado</h5>
+        <h5 class="text-pos3">Porto Alegre</h5>
+      </div>
+      <img class="whether-img" src="../../assets/Nublado.svg"/>
+      <div>
+        <h1 class="hero_title">10:52</h1>
+        <h5 class="highlights">segunda-feira</h5>
+        <h5 class="highlights1">28 de agosto, 2023</h5>  
+      </div>
+    </div>
+  </ion-content>
 </body>
 
 
