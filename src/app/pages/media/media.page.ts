@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-apps',
-  templateUrl: './apps.page.html',
-  styleUrls: ['./apps.page.scss'],
+  selector: 'app-media',
+  templateUrl: './media.page.html',
+  styleUrls: ['./media.page.scss'],
 })
-export class AppsPage implements OnInit {
+export class MediaPage implements OnInit {
 
   currentFood = undefined;
 
