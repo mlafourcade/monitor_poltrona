@@ -7,62 +7,76 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppsPage implements OnInit {
 
-  currentFood = undefined;
+  //currentFood = undefined;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  customAlertOptions = {
-    header: 'Selecione a categoria',
-    translucent: true,
-  };
+  direcao(ev: any) {
 
-  customPopoverOptions = {
-    header: 'Hair Color',
-    subHeader: 'Select your hair color',
-    message: 'Only select your dominant hair color',
-  };
+    let direcao = document.getElementById("contentSlide");
 
-  customActionSheetOptions = {
-    header: 'Colors',
-    subHeader: 'Select your favorite color',
-  };
-
-  categories = [
-    {
-      id: 1,
-      name: 'Acão',
-    },
-    {
-      id: 2,
-      name: 'Suspense',
-    },
-    {
-      id: 3,
-      name: 'Drama',
-    },
-    {
-      id: 4,
-      name: 'Comédia',
-    },
-    {
-      id: 5,
-      name: 'Terror',
-    },
-    {
-      id: 6,
-      name: 'Policial',
-    },
-    {
-      id: 7,
-      name: 'Guerra',
+    if (ev === 1) {
+      direcao!.scrollLeft -= 200;
+      console.log('esquerda');
     }
-  ];
-
-  handleChange(ev: any) {
-    console.log("Something happent")
-    this.currentFood = ev.target.value;
+    else {
+      direcao!.scrollLeft += 200;
+      console.log('direita');
+    }
   }
+
+  // customAlertOptions = {
+  //   header: 'Selecione a categoria',
+  //   translucent: true,
+  // };
+
+  // customPopoverOptions = {
+  //   header: 'Hair Color',
+  //   subHeader: 'Select your hair color',
+  //   message: 'Only select your dominant hair color',
+  // };
+
+  // customActionSheetOptions = {
+  //   header: 'Colors',
+  //   subHeader: 'Select your favorite color',
+  // };
+
+  // categories = [
+  //   {
+  //     id: 1,
+  //     name: 'Acão',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Suspense',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Drama',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Comédia',
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'Terror',
+  //   },
+  //   {
+  //     id: 6,
+  //     name: 'Policial',
+  //   },
+  //   {
+  //     id: 7,
+  //     name: 'Guerra',
+  //   }
+  // ];
+
+  // handleChange(ev: any) {
+  //   console.log("Something happent")
+  //   this.currentFood = ev.target.value;
+  // }
 }
