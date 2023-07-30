@@ -35,7 +35,7 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
 .flex-header {
     //border: 1px solid #fff;
     display: flex;
-    //justify-content: start;
+    //justify-content: flex-start;
     flex-flow: row nowrap; //flex-direction + flex-wrap
     max-width: 980px;
 }
@@ -48,7 +48,7 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
     //border: 1px solid #fff;
     display: flex;
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin-left: 5%;
 }
@@ -56,14 +56,14 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
     //border: 1px solid #fff;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-center;
     align-items: center;
 }
 .flex-header-area_end {
     //border: 1px solid #fff;
     display: flex;
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 5%;
 }
@@ -104,14 +104,14 @@ $font_type_2: 600 22px/1.17 "Roboto", Helvetica, Arial, serif;
     //border: 1px solid #fff;
     display: flex;
     padding-right: 20px;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 $font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
 .flex-toolbox-area_center {
     //border: 1px solid #fff;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     font: $font_type_5;
 }
@@ -119,7 +119,7 @@ $font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
     //border: 1px solid #fff;
     display: flex;
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 .flex-container {
@@ -179,7 +179,7 @@ $font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
     flex-flow: column wrap; //flex-direction + flex-wrap
     color: white;
     text-align: left;
-    justify-content: start;
+    justify-content: flex-start;
 }
 $font_type_4: 600 12px "Roboto", Helvetica, Bold, serif;
 .toolbar_button_item {
@@ -216,7 +216,7 @@ ion-select {
     --highlight-color-valid: whitesmoke;
     font: $font_type_5;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-center;
 }
 // ion-select::part(placeholder),
 // ion-select::part(text) {
@@ -253,4 +253,8 @@ ion-select::part(icon) {
     font-size: 16px;
     margin-left: 14px;
     cursor: pointer;
+}
+.link-mouse {
+    cursor: pointer;    //coloca o objeto de seleção no mouse
+    user-select:none;
 }

@@ -28,7 +28,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/apps/apps.module').then( m => m.AppsPageModule)
   },
   {
-    path: 'playback',
+    path: 'playback/:type/:id',
     loadChildren: () => import('./pages/playback/playback.module').then( m => m.PlaybackPageModule)
   },
   { 

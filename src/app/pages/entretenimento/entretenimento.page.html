@@ -69,25 +69,30 @@
       <div class="type-text-style">
         Filmes
       </div>
-      <div class="select-box-text" routerLink="/media">
+      <div class="select-box-text link-mouse" routerLink="/media/movies">
         Ver todos
       </div>
     </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/culpadasestrelas.svg"/>
+    <div id="btn-slide-left" (click)="direcao(1)">
+      <
+    </div>
+    <section id="contentSlide">
+      <div id="block">
+        <div class="flex-item-img link-mouse">
+          <img src="../../assets/culpadasestrelas.svg" routerLink="/playback/movies/1">
+          <!-- [routerLink]="/playback/movies/1" -->
+          <!-- [routerLink]="['/' , 'media', type, item.Id, item.Origin ? item.Origin : 'server']" /> -->
         </div>
         <div class="flex-item-txt">
           <p class="name-text-style">
-            A Culpa é das Estrelas
+            A Culpa é das Estrela
           </p>      
           <p class="info-text-style">
             2014 - 132 min
           </p>      
         </div>
       </div>
-      <div class="flex-format-item">
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/barracadobeijo.svg"/>
         </div>
@@ -100,7 +105,7 @@
           </p>      
         </div>
       </div>
-      <div class="flex-format-item">
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/infiltrado.svg"/>
         </div>
@@ -113,7 +118,7 @@
           </p>      
         </div>
       </div>
-      <div class="flex-format-item">
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/avatar.svg"/>
         </div>
@@ -126,7 +131,7 @@
           </p>      
         </div>
       </div>      
-      <div class="flex-format-item">
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/guardioesdagalaxia.svg"/>
         </div>
@@ -139,7 +144,7 @@
           </p>      
         </div>
       </div>      
-      <div class="flex-format-item">
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/inferno.svg"/>
         </div>
@@ -152,7 +157,639 @@
           </p>      
         </div>
       </div>    
-      <div class="flex-format-item">
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/flash.jpg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Flash
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>        <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/culpadasestrelas.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Culpa é das Estrelas
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/barracadobeijo.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            A Barraca do Beijo
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/infiltrado.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Infiltrado
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/avatar.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Avatar
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/guardioesdagalaxia.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Guardiões da Galáxia
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>      
+      <div id="block">
+        <div class="flex-item-img">
+          <img src="../../assets/inferno.svg"/>
+        </div>
+        <div class="flex-item-txt">
+          <p class="name-text-style">
+            Inferno
+          </p>      
+          <p class="info-text-style">
+            2014 - 132 min
+          </p>      
+        </div>
+      </div>    
+      <div id="block">
         <div class="flex-item-img">
           <img src="../../assets/flash.jpg"/>
         </div>
@@ -166,18 +803,21 @@
         </div>
       </div>  
     </section>
+    <div id="btn-slide-right" (click)="direcao(2)">
+      >
+    </div>
     <section class="toolbox-style type-text-style">
       <div class="type-text-style">
         Séries
       </div>
-      <div class="select-box-text" routerLink="/media">
+      <div class="select-box-text link-mouse" routerLink="/media/series">
         Ver todos
       </div>
     </section>
     <section class="flex-container">
       <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/vandinha.svg"/>
+        <div class="flex-item-img  link-mouse">
+          <img src="../../assets/vandinha.svg" routerLink="/media/series"/>
         </div>
         <div class="flex-item-txt">
           <p class="name-text-style">
@@ -271,14 +911,14 @@
       <div class="type-text-style">
         Músicas
       </div>
-      <div class="select-box-text">
+      <div class="select-box-text link-mouse" routerLink="/media/music">
         Ver todos
       </div>
     </section>
     <section class="flex-container">
       <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/metallica.jpg"/>
+        <div class="flex-item-img link-mouse">
+          <img src="../../assets/metallica.jpg" routerLink="/media/music"/>
         </div>
         <div class="flex-item-txt">
           <p class="name-text-style">

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-apps',
@@ -9,9 +10,12 @@ export class AppsPage implements OnInit {
 
   //currentFood = undefined;
 
-  constructor() { }
+  public folder!: string;
+  private activatedRoute = inject(ActivatedRoute);
+  constructor() {}
 
   ngOnInit() {
+    this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
 
   direcao(ev: any) {
@@ -19,11 +23,11 @@ export class AppsPage implements OnInit {
     let direcao = document.getElementById("contentSlide");
 
     if (ev === 1) {
-      direcao!.scrollLeft -= 200;
+      direcao!.scrollLeft -= 1920;
       console.log('esquerda');
     }
     else {
-      direcao!.scrollLeft += 200;
+      direcao!.scrollLeft += 1920;
       console.log('direita');
     }
   }

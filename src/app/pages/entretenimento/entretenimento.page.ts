@@ -61,6 +61,20 @@ export class EntretenimentoPage implements OnInit {
     }
   ];
 
+  direcao(ev: any) {
+
+    let direcao = document.getElementById("contentSlide");
+
+    if (ev === 1) {
+      direcao!.scrollLeft -= 1920;
+      console.log('esquerda');
+    }
+    else {
+      direcao!.scrollLeft += 1920;
+      console.log('direita');
+    }
+  }
+
   handleChange(ev: any) {
     console.log("Something happent")
     this.currentFood = ev.target.value;

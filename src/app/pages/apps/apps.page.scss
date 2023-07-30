@@ -1,63 +1,61 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: auto;     //determina como vai se comportar o conteudo dentro do container 
+  margin: 0px;
+  padding: 0px;
 }
 #contentSlide {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 100%;
-    height: 250px;
-    background-color: aquamarine;
-    z-index: 0;
-    overflow-x: scroll;     //determina como vai se comportar o conteudo dentro do container 
-    overflow-y: hidden;   //determina como vai se comportar o conteudo dentro do container 
-    scroll-behavior: smooth;
-    //border: 1px solid #fff;
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: aquamarine;
+  z-index: 0;
+  overflow-x: auto;     //determina como vai se comportar o conteudo dentro do container 
+  overflow-y: hidden;   //determina como vai se comportar o conteudo dentro do container 
+  scroll-behavior: smooth;
 }
 #contentSlide::-webkit-scrollbar{
-    //display: none;
+  display: none;
 }
 #contentSlide #block {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    top: 40px;
-    width: 150px;
-    height: 200px;
-    background-color: blue;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  top: 40px;
+  max-width: 150px;
+  height: 200px;
+  background-color: blue;
 }
 #btn-slide-left {
-    padding: 0px;
-    color: whitesmoke;
-    position: absolute;
-    display: flex;
-    top: 70px;
-    left: 0;
-    width: 50px;
-    height: 80px;
-    line-height: 80px;  //alinha no centro do height
-    text-align: center;
-    z-index: 1;         //configura o elemento para frente ou para tras no eixo z
-    cursor: pointer;    //coloca o objeto de seleção no mouse
-    user-select: none;
-    background-color: rgba(255, 68, 0, 0.308);
+  padding: 0px;
+  color: whitesmoke;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 50px;
+  height: 80px;
+  line-height: 80px;  //alinha no centro do height
+  text-align: center;
+  z-index: 1;         //configura o elemento para frente ou para tras no eixo z
+  cursor: pointer;    //coloca o objeto de seleção no mouse
+  user-select: none;
+  background-color: rgba(255, 68, 0, 0.308);
 }
 #btn-slide-right {
-    padding: 0px;
-    color: whitesmoke;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 50px;
-    height: 80px;
-    line-height: 80px;  //alinha no centro do height
-    text-align: center;
-    z-index: 1;         //configura o elemento para frente ou para tras no eixo z
-    cursor: pointer;    //coloca o objeto de seleção no mouse
-    user-select: none;
-    background-color: rgba(255, 68, 0, 0.308);
+  padding: 0px;
+  color: whitesmoke;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 50px;
+  height: 80px;
+  line-height: 80px;  //alinha no centro do height
+  text-align: center;
+  z-index: 1;         //configura o elemento para frente ou para tras no eixo z
+  cursor: pointer;    //coloca o objeto de seleção no mouse
+  user-select: none;
+  background-color: rgba(255, 68, 0, 0.308);
 }
 
 
