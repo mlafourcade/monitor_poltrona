@@ -58,7 +58,11 @@ export class EntretenimentoPage implements OnInit {
     {
       id: 7,
       name: 'Guerra',
-    }
+    },
+    {
+      id: 8,
+      name: 'Faroeste',
+    },
   ];
 
   direcao(ev: any) {

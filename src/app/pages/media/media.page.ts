@@ -88,27 +88,23 @@ export class MediaPage implements OnInit {
       name: 'Drama',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Comédia',
     },
     {
-      id: 3,
+      id: 5,
       name: 'Terror',
     },
     {
-      id: 3,
+      id: 6,
       name: 'Policial',
     },
     {
-      id: 3,
+      id: 7,
       name: 'Guerra',
     },
     {
-      id: 3,
-      name: 'Cupcakes',
-    },
-    {
-      id: 3,
+      id: 8,
       name: 'Faroeste',
     },
   ];
