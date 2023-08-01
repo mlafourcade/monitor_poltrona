@@ -1,0 +1,91 @@
+.flex-container {
+    display: flex;
+}
+#content-slide {
+    position: relative;
+    max-width: 955px;
+    left: -25px;
+    z-index: 0;
+    display: block;
+    overflow-x: auto;     //determina como vai se comportar o conteudo dentro do container 
+    overflow-y: hidden;   //determina como vai se comportar o conteudo dentro do container 
+    scroll-behavior: smooth;
+}
+#content-slide::-webkit-scrollbar{
+    display: none;
+}
+#content-slide #block-slide {
+    display: flex;
+    gap: 20px;
+    flex-flow: row nowrap; //flex-direction + flex-wrap
+    position: relative;
+
+}
+#content-slide #block-slide #item{
+    flex-basis: 15%;
+}
+.link-mouse {
+    cursor: pointer;    //coloca o objeto de seleção no mouse
+    user-select:none;
+}
+.flex-item-img {
+    width: 132px;
+    // border-radius: 20px;
+}
+#btn-slide-left {
+    padding: 0px;
+    color: whitesmoke;
+    position:relative;
+    float: left;
+    top: 80px;
+    margin-left: 0px;
+    width: 25px;
+    height: 80px;
+    line-height: 80px;  //alinha no centro do height
+    text-align: center;
+    z-index: 1;         //configura o elemento para frente ou para tras no eixo z
+    cursor: pointer;    //coloca o objeto de seleção no mouse
+    user-select: none;
+    background-color: #f5400e9c;
+}
+#btn-slide-right {
+    padding: 0px;
+    color: whitesmoke;
+    position:relative;
+    float: left;
+    top: 80px;
+    margin-left: -50px;
+    width: 25px;
+    height: 80px;
+    line-height: 80px;  //alinha no centro do height
+    text-align: center;
+    z-index: 1;         //configura o elemento para frente ou para tras no eixo z
+    cursor: pointer;    //coloca o objeto de seleção no mouse
+    user-select: none;
+    background-color: #f5400e9c;
+}
+.flex-item-txt {
+    //border: 1px solid #fff;
+    width: 100%;
+    max-width: 132px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap; //flex-direction + flex-wrap
+    color: white;
+    text-align: left;
+    justify-content: flex-start;
+}
+$font_type_0: 500 15px/1.17 "Roboto", Helvetica, Arial, serif;
+.name-text-style {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    text-decoration: none;  //Links sublinhados
+    color: white;
+    font: $font_type_0;
+}
+$font_type_1: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
+.info-text-style {
+    text-decoration: none;  //Links sublinhados
+    color: white;
+    font: $font_type_1;
+}
