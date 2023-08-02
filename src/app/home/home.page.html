@@ -1,187 +1,54 @@
 <body>
   <ion-header class="flex-header" [translucent]="true">
-    <div class="flex-header-area">
-      <div class="flex-header-area_start">
-        <div class="flex-item">
-          <ion-buttons slot="secondary">
-            <div class="flex-link">
-              <!-- <div class="flex-icon-pos">
-                <ion-button routerLink="/home">
-                  <ion-icon slot="icon-only" name="home"></ion-icon>
-                </ion-button>
-              </div> -->
-              <!-- <a routerLink="/home">Início</a> -->
-            </div>
-          </ion-buttons>
-        </div>
+    <div class="flex-header-area_start">
+    </div>
+    <div class="flex-header-area_center">
+      <div class="flex-item">
+        <img class="img-logo" src="../../assets/logoOrbe.svg"/>
       </div>
     </div>
-    <div class="flex-header-area">
-      <div class="flex-header-area_center">
-        <div class="flex-item">
-          <img class="img-logo" src="../../assets/logoOrbe.svg"/>
-        </div>
-      </div>
+    <div class="flex-header-area_end">
+      <div class="flex-item">
+        <a class="header-text-style">11:40 AM</a>
+      </div> 
     </div>
-    <div class="flex-header-area">
-      <div class="flex-header-area_end">
-        <div class="flex-item">
-          <ul class="menu">
-            <li><a>11:40 AM</a></li>
-          </ul>
-        </div> 
-      </div>
-    </div>
-  </ion-header>  
-  <ion-content>
+</ion-header>  
+<ion-content>
     <div class="main_container">
-      <button type="button" routerLink="/entretenimento">
-        <div class="entr-page-button">
-          <img style="border-radius:8px" src="../../assets/Entretenimento.svg"/>
-          <h1 class="text-pos-01">Entretenimento</h1>
-          <h1 class="text-pos-02">Filmes, Séries e Músicas</h1>  
-        </div>
-      </button>
-      <button type="button" routerLink="/kids">
-        <div class="kids-page-button">
-          <img  style="border-radius:8px" src="../../assets/image 81.png"/>
-          <h1 class="text-pos-01">kids</h1>
-          <h1 class="text-pos-02">Conteúdo para Crianças</h1>  
-        </div>
-    </button>
-      <button type="button" routerLink="/apps">
-        <div class="app-page-button">
-          <ion-icon class="home-icon" name="apps-outline"></ion-icon>
-          <h1 class="text-pos-01">Apps</h1>
-          <h1 class="text-pos-02">Aplicativos disponíveis</h1>
-        </div>
-      </button>
-      <button type="button" routerLink="/pesquisa">          
-        <div class="pesq-page-button">
-          <ion-icon class="home-icon" name="list-outline"></ion-icon>
-          <h1 class="text-pos-01">Pesquisa</h1>
-          <h1 class="text-pos-02">Nos ajude a melhorar</h1>
-        </div>
-      </button>
+      <div class="entr-page-button" routerLink="/entretenimento">
+        <img style="border-radius:8px" src="../../assets/Entretenimento.svg"/>
+        <h1 class="text-pos-01">Entretenimento</h1>
+        <h1 class="text-pos-02">Filmes, Séries e Músicas</h1>  
+      </div>
+      <div class="kids-page-button" routerLink="/kids">
+        <img  style="border-radius:8px" src="../../assets/image 81.png"/>
+        <h1 class="text-pos-01">kids</h1>
+        <h1 class="text-pos-02">Conteúdo para Crianças</h1>  
+      </div>
+      <div class="app-page-button" routerLink="/apps">
+        <ion-icon class="home-icon" name="apps-outline"></ion-icon>
+        <h1 class="text-pos-01">Apps</h1>
+        <h1 class="text-pos-02">Aplicativos disponíveis</h1>
+      </div>
+      <div class="pesq-page-button" routerLink="/pesquisa">
+        <ion-icon class="home-icon" name="list-outline"></ion-icon>
+        <h1 class="text-pos-01">Pesquisa</h1>
+        <h1 class="text-pos-02">Nos ajude a melhorar</h1>
+      </div>
       <div class="clima"> 
         <img style="border-radius: 100px" src="../../assets/image 80.svg"/>
-        <h1 class="text-pos-03">22°</h1>
-        <h5 class="text-pos2">Nublado</h5>
-        <h5 class="text-pos3">Porto Alegre</h5>
+        <h1 class="text-pos-04">22°</h1>
+        <h5 class="text-pos-05">Nublado</h5>
+        <h5 class="text-pos-03">Porto Alegre</h5>
       </div>
       <img class="whether-img" src="../../assets/Nublado.svg"/>
       <div>
-        <h1 class="hero_title">10:52</h1>
-        <h5 class="highlights">segunda-feira</h5>
-        <h5 class="highlights1">28 de agosto, 2023</h5>  
+        <h1 class="text-pos-08">10:52</h1>
+        <h5 class="text-pos-06">segunda-feira</h5>
+        <h5 class="text-pos-07">28 de agosto, 2023</h5>  
       </div>
+      <div class="teste-position1">-</div>
+      <div class="teste-position2">-</div>
     </div>
   </ion-content>
 </body>
-
-
-
-
-
-<!-- <ion-header>
-  <div class="flex_container">
-    <div class="flex_item"></div>
-    <div class="flex_item"></div>
-    <div class="flex_item"></div>
-    <div class="flex_item">
-      <img src="../../assets/logoOrbe.svg"/>
-    </div>
-    <div class="flex_item"></div>
-    <div class="flex_item"></div>
-    <div class="flex_item">
-      <div class="flex_right_align">
-        11:00 AM
-      </div>
-    </div>
-  </div>
-  </ion-header>
-  <ion-content>
-    <div class="main_container">
-      <div class="toolbar_container">
-        <ion-button class="toolbar_button_item" shape="round" color="danger" strong="true">Todos</ion-button>
-        <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Filmes</ion-button>
-        <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Series</ion-button>
-        <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Documentários</ion-button>
-        <ion-button class="toolbar_button_item" fill="outline" shape="round" color="light" strong="true">Músicas</ion-button>
-      </div>
-    </div> 
-  </ion-content> -->
-
-<!--
-  <p>11:00 AM</p>
-</ion-header>
-
-<ion-content id="main_style" [fullscreen]="true">
-</ion-content>-->
-
-<!-- <div className="Inicio" style={{width: 1024, height: 600, position: 'relative', background: '#191919'}}>
-  <div className="Image63" style={{width: 1096, height: 616, left: -36, top: -8, position: 'absolute'}} />
-  <div className="Frame235" style={{left: 430, top: 135, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 22, display: 'inline-flex'}}>
-    <div className="Frame234" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 22, display: 'inline-flex'}}>
-      <div className="Frame221" style={{width: 154, height: 280, position: 'relative', transform: 'rotate(90deg)', transformOrigin: '0 0', background: 'white', boxShadow: '0px 25px 30px -15px rgba(238, 112, 246, 0.50)', borderRadius: 8, overflow: 'hidden'}}>
-        <img className="Image81" style={{width: 330, height: 186, left: -16, top: 305, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0'}} src="https://via.placeholder.com/330x186" />
-        <div className="Entretenimento" style={{left: 100, top: 268, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Entretenimento</div>
-        <div className="FilmesSRiesEMSicas" style={{left: 126, top: 268, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', opacity: 0.80, color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Filmes, séries e músicas</div>
-      </div>
-      <div className="Frame223" style={{width: 154, height: 280, position: 'relative', transform: 'rotate(90deg)', transformOrigin: '0 0', background: 'white', boxShadow: '0px 25px 30px -15px rgba(253, 195, 110, 0.50)', borderRadius: 8, overflow: 'hidden', border: '0.50px rgba(255, 255, 255, 0) solid'}}>
-        <img className="Image81" style={{width: 290, height: 164, left: -5, top: 285, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0'}} src="https://via.placeholder.com/290x164" />
-        <div className="Kids" style={{left: 100, top: 268, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Kids</div>
-        <div className="ConteDoParaCrianAs" style={{left: 126, top: 268, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', opacity: 0.80, color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Conteúdo para crianças</div>
-      </div>
-    </div>
-    <div className="Frame235" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 22, display: 'inline-flex'}}>
-      <div className="Frame221" style={{width: 154, paddingTop: 35, paddingBottom: 12, paddingLeft: 100, paddingRight: 12, transform: 'rotate(90deg)', transformOrigin: '0 0', background: 'linear-gradient(90deg, #1DE5D6 0%, #309FE5 100%)', boxShadow: '0px 25px 30px -15px rgba(29, 227, 214, 0.50)', borderTopLeftRadius: 64, borderTopRightRadius: 8, borderBottomRightRadius: 8, borderBottomLeftRadius: 8, overflow: 'hidden', justifyContent: 'flex-end', alignItems: 'flex-end', gap: 5, display: 'inline-flex'}}>
-        <div className="Apps" style={{transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Apps</div>
-        <div className="AplicativosDisponVeis" style={{transform: 'rotate(-90deg)', transformOrigin: '0 0', opacity: 0.80, color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Aplicativos disponíveis</div>
-      </div>
-      <div className="Frame223" style={{width: 154, height: 190, position: 'relative', transform: 'rotate(90deg)', transformOrigin: '0 0', background: 'linear-gradient(90deg, #B1C95C 0%, #3ABF90 100%)', boxShadow: '0px 25px 30px -15px rgba(217, 241, 131, 0.50)', borderRadius: 8, overflow: 'hidden', border: '0.50px rgba(255, 255, 255, 0) solid'}}>
-        <div className="Pesquisa" style={{left: 100, top: 178, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Pesquisa</div>
-        <div className="NosAjudeAMelhorar" style={{left: 126, top: 178, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', opacity: 0.80, color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Nos ajude a melhorar</div>
-        <div className="Group7" style={{width: 20, height: 20, left: 14, top: 178, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0'}}>
-          <div className="Rectangle3476" style={{width: 12.50, height: 2.08, left: 1.67, top: -7.50, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 100}} />
-          <div className="Rectangle3477" style={{width: 12.50, height: 2.08, left: 9.17, top: -7.50, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 100}} />
-          <div className="Rectangle3478" style={{width: 12.50, height: 2.08, left: 16.67, top: -7.50, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 100}} />
-          <div className="Ellipse5" style={{width: 5, height: 5, left: 0, top: 0, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 9999}} />
-          <div className="Ellipse8" style={{width: 5, height: 5, left: 7.50, top: -0, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 9999}} />
-          <div className="Ellipse11" style={{width: 5, height: 5, left: 15, top: -0, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', background: 'white', borderRadius: 9999}} />
-        </div>
-      </div>
-    </div>
-  </div>
-  <img className="KisspngCumulusOvercastCloudWeatherCumulus5b4bb11425e4b41" style={{width: 245, height: 245, left: 78, top: 256, position: 'absolute'}} src="https://via.placeholder.com/245x245" />
-  <div className="Frame224" style={{width: 91, height: 208, left: 385, top: 374, position: 'absolute', transform: 'rotate(90deg)', transformOrigin: '0 0', background: '#414141', borderRadius: 100, overflow: 'hidden', border: '0.50px rgba(255, 255, 255, 0.50) solid'}}>
-    <img className="Image80" style={{width: 430, height: 231, left: -22, top: 281, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0'}} src="https://via.placeholder.com/430x231" />
-    <img className="KisspngCumulusOvercastCloudWeatherCumulus5b4bb11425e4b41" style={{width: 245, height: 245, left: -119, top: 307, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', boxShadow: '20px 20px 20px ', filter: 'blur(20px)'}} src="https://via.placeholder.com/245x245" />
-    <div style={{left: 18, top: 184, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 48, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>22°</div>
-    <div className="Nublado" style={{left: 30, top: 101, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Nublado</div>
-    <div className="PortoAlegre" style={{left: 48, top: 101, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0', color: 'white', fontSize: 12, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Porto Alegre</div>
-  </div>
-  <div className="52" style={{left: 214, top: 150, position: 'absolute', color: 'white', fontSize: 64, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>10:52</div>
-  <div className="SegundaFeira" style={{left: 279, top: 232, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>segunda-feira</div>
-  <div className="DeAgosto2023" style={{left: 244, top: 255, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>28 de agosto, 2023</div>
-  <div className="Group6" style={{width: 20, height: 20, left: 744, top: 150, position: 'absolute'}}>
-    <div className="Ellipse3" style={{width: 5, height: 5, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse6" style={{width: 5, height: 5, left: 0, top: 7.50, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse9" style={{width: 5, height: 5, left: 0, top: 15, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse4" style={{width: 5, height: 5, left: 7.50, top: -0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse7" style={{width: 5, height: 5, left: 7.50, top: 7.50, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse10" style={{width: 5, height: 5, left: 7.50, top: 15, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse5" style={{width: 5, height: 5, left: 15, top: -0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse8" style={{width: 5, height: 5, left: 15, top: 7.50, position: 'absolute', background: 'white', borderRadius: 9999}} />
-    <div className="Ellipse11" style={{width: 5, height: 5, left: 15, top: 15, position: 'absolute', background: 'white', borderRadius: 9999}} />
-  </div>
-  <div className="Frame86" style={{paddingTop: 16.33, paddingBottom: 16.97, paddingLeft: 483.74, paddingRight: 35, left: 0, top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 383, display: 'inline-flex'}}>
-    <div className="Camada1" style={{flex: '1 1 0', alignSelf: 'stretch', position: 'relative'}}>
-      <div className="Vector" style={{width: 18.36, height: 18.70, left: 0, top: 0, position: 'absolute', background: 'white'}}></div>
-      <div className="Vector" style={{width: 9.92, height: 12.82, left: 20.16, top: 5.36, position: 'absolute', background: 'white'}}></div>
-      <div className="Vector" style={{width: 13.59, height: 18.33, left: 31.77, top: 0.19, position: 'absolute', background: 'white'}}></div>
-      <div className="Vector" style={{width: 13.27, height: 13.47, left: 46.99, top: 5.02, position: 'absolute', background: 'white'}}></div>
-    </div>
-    <div className="00Am" style={{color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>11:00 AM</div>
-  </div>
-</div> -->

@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-playback',
-  templateUrl: './playback.page.html',
-  styleUrls: ['./playback.page.scss'],
+  selector: 'app-audio-player',
+  templateUrl: './audio-player.page.html',
+  styleUrls: ['./audio-player.page.scss'],
 })
-export class PlaybackPage implements OnInit {
+export class AudioPlayerPage implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  
   vermais() {
     let maisTexto = document.getElementById("mais");
     let pontos = document.getElementById("pontos");

@@ -1,12 +1,7 @@
 
 $color_type_0: rgb(255, 255, 255);
 $bg_color_type_0: rgb(25, 25, 25);
-$font_type_0: 700 64px/1.17 "Roboto", Helvetica, Arial, serif;
-$font_type_1: 700 16px/1.18 "Roboto", Helvetica, Arial, serif;
-$font_type_2: 400 16px/1.18 "Roboto", Helvetica, Arial, serif;
 $font_type_3: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
-$font_type_4: 400 14px/1.18 "Roboto", Helvetica, Bold, serif;
-$font_type_5: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
 
 body, ul, li, p {
   margin: 0px;
@@ -34,52 +29,6 @@ a {
   display: block;
   padding: 10px;
 }
-.flex-header {
-  //border: 1px solid #fff;
-  display: flex;
-  //justify-content: start;
-  flex-flow: row nowrap; //flex-direction + flex-wrap
-  max-width: 980px;
-}
-.flex-header-area {
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-}
-.flex-header-area_start {
-  //border: 1px solid #fff;
-  display: flex;
-  width: 100%;
-  justify-content: start;
-  align-items: center;
-  margin-left: 5%;
-}
-.flex-header-area_center {
-  //border: 1px solid #fff;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.flex-header-area_end {
-  //border: 1px solid #fff;
-  display: flex;
-  width: 100%;
-  justify-content: end;
-  align-items: center;
-  margin-right: 5%;
-}
-.flex-link {
-  display: flex;
-  align-items: center;
-}
-.flex-icon-pos {
-  margin-bottom: 5%;
-}
-.img-logo {
-  width: 80px;
-  display: block;
-}
 .flex-item > img {
   max-width: 132px;
   border-radius: 5%;
@@ -88,23 +37,13 @@ a {
   max-width: 132px;
   border-radius: 5%;
 }
-.flex-item {
-  margin: 5px;
-  padding: 5px;
-  color: white;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  //background-color: #447;
-  text-align: center;
-  flex: 1, 1, 200px;   //flex-grow + flex-shrink + flex-basis
-}
 .flex_container{ //propriedades de container
   height: 10%;
   margin: 0 auto;
   display: flex; //observa a disposição de eixos main axis e cross axis. Por padrão é block
   flex-direction: row; //main axion horizontal (padrão) 
   flex-wrap: nowrap; //não quebra a linha. Item que não cabe, vai para baixo 
-  justify-content: center; //alinha os itens (divs) no main axis. Por padrão é start (no inicio da linha)
+  justify-content: center; //alinha os itens (divs) no main axis. Por padrão é flex-start (no inicio da linha)
   align-items: stretch; //alinha os itens (divs) no cross axis. Por padrão é stretch (do alto da coluna até embaixo)
 }
 .flex_right_align{
@@ -113,17 +52,13 @@ a {
   display: flex; 
   justify-content: flex-end; 
 }
-.main_container{ //propriedades de container
-  height: 100%;
-  background-color: #000;
-}
 .toolbar_container{ //propriedades de container
   height: 10%;
   margin-right: 2%;
   display: flex; //observa a disposição de eixos main axis e cross axis. Por padrão é block
   flex-direction: row; //main axion horizontal (padrão) 
   flex-wrap: nowrap; //não quebra a linha. Item que não cabe, vai para baixo 
-  justify-content: flex-end; //alinha os itens (divs) no main axis. Por padrão é start (no inicio da linha)
+  justify-content: flex-end; //alinha os itens (divs) no main axis. Por padrão é flex-start (no inicio da linha)
   align-items: center; //alinha os itens (divs) no cross axis. Por padrão é stretch (do alto da coluna até embaixo)
   background-color: #000;
 }
@@ -152,36 +87,7 @@ a {
   top: 135px;
   width: 190px;
 }
-.hero_title {
-  color: $color_type_0;
-  font: $font_type_0;
-  height: fit-content;
-  left: 214px;
-  letter-spacing: 0px;
-  position: absolute;
-  top: 150px;
-  width: fit-content;
-}
-.highlights {
-  color: $color_type_0;
-  font: $font_type_1;
-  height: fit-content;
-  left: 279px;
-  letter-spacing: 0px;
-  position: absolute;
-  top: 232px;
-  width: fit-content;
-}
-.highlights1 {
-  color: $color_type_0;
-  font: $font_type_2;
-  height: fit-content;
-  left: 244px;
-  letter-spacing: 0px;
-  position: absolute;
-  top: 255px;
-  width: fit-content;
-}
+
 .icon {
   bottom: 430px;
   height: 20px;
@@ -191,63 +97,75 @@ a {
   top: 150px;
   width: 20px;
 }
-.whether-img {
-  bottom: 99px;
-  height: 245px;
-  left: 78px;
-  position: absolute;
-  right: 701px;
-  top: 256px;
-  width: 245px;
+
+
+
+
+
+ion-icon {
+  color: whitesmoke;
 }
-.app-page-button{
-  background-color: #1DE5D6;
-  background-image: linear-gradient(#1DE5D6 0%, #309FE5 100%);
-  bottom: 311px;
-  height: 154px;
-  width: 190px;
-  left: 732px;
-  position: absolute;
-  right: 102px;
-  top: 135px;
-  filter:drop-shadow(0px 10px 10px #1e817a); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
-  border-radius:8px 64px 8px 8px;
-  padding:0px;
+
+/*CSS Organization*/
+/******** header ********/
+.flex-header {
+  height: 40px;
+  //border: 1px solid #fff;
+  display: flex;
+  flex-flow: row nowrap; //flex-direction + flex-wrap
+  max-width: 1024px;
 }
-.pesq-page-button{
-  background-color: #B1C95C;
-  background-image: linear-gradient(#B1C95C 0%, #3ABF90 100%);
-  bottom: 135px;
-  height: 154px;
-  left: 732px;
-  position: absolute;
-  right: 102px;
-  top: 311px;
-  width: 190px;
-  filter:drop-shadow(0px 10px 10px #63761f); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
-  border-radius:8px;
-  padding:0px;
+.flex-header-area_start {
+  //border: 1px solid #fff;
+  padding-left: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0px;
 }
-.entr-page-button{
-  bottom: 311px;
-  height: 154px;
-  left: 430px;
-  position: absolute;
-  filter:drop-shadow(0px 10px 10px #2a216e); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
-  right: 314px;
-  top: 135px;
-  width: 280px;
+.flex-header-area_center {
+  //border: 1px solid #fff;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
-.kids-page-button{
-  bottom: 135px;
-  height: 154px;
-  left: 430px;
-  position: absolute;
-  filter:drop-shadow(0px 10px 10px #5a6b1d); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
-  right: 314px;
-  top: 311px;
-  width: 280px;
+.flex-header-area_end {
+  //border: 1px solid #fff;
+  padding-right: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0px;
 }
+$header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
+.header-text-style {
+    text-decoration: none;  //Links sublinhados
+    color: whitesmoke;
+    font: $header_font_type;    
+    text-align: center;
+}
+.flex-icon-pos {
+  padding-top: 6px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  color: whitesmoke;
+  font-size: 20px;
+  cursor: pointer;
+}
+.flex-item {
+  color: white;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.img-logo {
+  width: 80px;
+  display: block;
+}
+/******** content ********/
 $font_type_01: 700 18px/1.18 "Roboto", Helvetica, Bold, serif;
 .text-pos-01 {
   color: $color_type_0;
@@ -270,8 +188,19 @@ $font_type_02: 400 14px/1.18 "Roboto", Helvetica, Bold, serif;
   letter-spacing: 0px;
   position: absolute;
 }
-$font_type_03: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
+$font_type_05: 700 12px/1.18 "Roboto", Helvetica, Bold, serif;
 .text-pos-03 {
+  color: $color_type_0;
+  font: $font_type_05;
+  height: 56px;
+  top: 32px;
+  left: 102px;
+  letter-spacing: 0px;
+  position: absolute;
+  width: 100px;
+}
+$font_type_03: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
+.text-pos-04 {
   color: $color_type_0;
   font: $font_type_03;
   height: 56px;
@@ -281,9 +210,10 @@ $font_type_03: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
   letter-spacing: 0px;
   position: absolute;
 }
-.text-pos2 {
+$font_type_04: 400 14px/1.18 "Roboto", Helvetica, Bold, serif;
+.text-pos-05 {
   color: $color_type_0;
-  font: $font_type_4;
+  font: $font_type_04;
   height: 56px;
   top: 17px;
   left: 102px;
@@ -291,42 +221,136 @@ $font_type_03: 700 48px/1.17 "Roboto", Helvetica, Bold, serif;
   position: absolute;
   width: 74px;
 }
-.text-pos3 {
-  color: $color_type_0;
-  font: $font_type_5;
-  height: 56px;
-  top: 32px;
-  left: 102px;
-  letter-spacing: 0px;
+.main_container{ //propriedades de container
+  max-width: 1024px;
+  height: 565px;
+  background-color: #000;
+}
+.entr-page-button{
   position: absolute;
-  width: 100px;
+  top: 100px; //-35
+  left: 430px;
+  //right: 314px;
+  //bottom: 311px;
+  height: 154px;
+  width: 280px;
+  filter:drop-shadow(0px 10px 10px #2a216e); 
+  cursor: pointer;
+}
+.kids-page-button{
+  position: absolute;
+  top: 276px;
+  left: 430px;
+  //right: 314px;
+  //bottom: 135px;
+  height: 154px;
+  width: 280px;
+  filter:drop-shadow(0px 10px 10px #5a6b1d); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
+  cursor: pointer;
+}
+.app-page-button{
+  position: absolute;
+  background-color: #1DE5D6;
+  background-image: linear-gradient(#1DE5D6 0%, #309FE5 100%);
+  top: 100px;
+  left: 732px;
+  //right: 102px;
+  //bottom: 311px;
+  height: 154px;
+  width: 190px;
+  border-radius:8px 64px 8px 8px;
+  filter:drop-shadow(0px 10px 10px #1e817a); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
+  cursor: pointer;
+}
+.pesq-page-button{
+  position: absolute;
+  background-color: #B1C95C;
+  background-image: linear-gradient(#B1C95C 0%, #3ABF90 100%);
+  top: 276px;
+  left: 732px;
+  //right: 102px;
+  //bottom: 135px;
+  height: 154px;
+  width: 190px;
+  border-radius:8px;
+  filter:drop-shadow(0px 10px 10px #63761f); //rgba(0.8509804010391235,0.9450980424880981,0.5137255191802979,0.5)
+  cursor: pointer;
 }
 .clima{
-  background-color:#414141;
-  bottom: 135px;
-  height: 91px;
-  left: 177px;
-  right: 639px;
-  top: 374px;
-  width: 208px;
   position: absolute;
+  background-color:#414141;
+  top: 339px;
+  left: 177px;
+  //right: 639px;
+  //bottom: 135px;
+  height: 91px;
+  width: 208px;
   border-radius: 100px;
   border-style: solid;
   border-width: 0.50px;
   border-color: rgba(255, 255, 255, 0.50);
   overflow: 'hidden';
-  padding:0px;
+}
+.whether-img {
+  position: absolute;
+  top: 221px;
+  left: 78px;
+  //right: 701px;
+  //bottom: 99px;
+  height: 245px;
+  width: 245px;
 }
 .home-icon {
   color: white;
   width: 30px;
   height: 100px;
   top: -20px;
-  left: -70px;
+  left: 10px;
   position: relative;
 }
-
-ion-icon {
-  color: whitesmoke;
+$font_type_00: 700 64px/1.17 "Roboto", Helvetica, Arial, serif;
+.text-pos-08 {
+  color: $color_type_0;
+  font: $font_type_00;
+  position: absolute;
+  top: 116px;
+  left: 214px;
+  height: fit-content;
+  width: fit-content;
+  letter-spacing: 0px;
+}
+$font_type_05: 700 16px/1.18 "Roboto", Helvetica, Arial, serif;
+.text-pos-06 {
+  color: $color_type_0;
+  font: $font_type_05;
+  position: absolute;
+  top: 198px;
+  left: 279px;
+  height: fit-content;
+  width: fit-content;
+  letter-spacing: 0px;
+}
+$font_type_06: 400 16px/1.18 "Roboto", Helvetica, Arial, serif;
+.text-pos-07 {
+  color: $color_type_0;
+  font: $font_type_06;
+  position: absolute;
+  top: 221px;
+  left: 244px;
+  height: fit-content;
+  width: fit-content;
+  letter-spacing: 0px;
+}
+.teste-position1 {
+  position: absolute;
+  color: white;
+  top: 300px;
+  left: 512px;
+}
+.teste-position2 {
+  position: absolute;
+  color: white;
+  top: 265px;
+  left: 480px;
 }
 

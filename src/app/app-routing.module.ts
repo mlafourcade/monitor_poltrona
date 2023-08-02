@@ -34,7 +34,15 @@ const routes: Routes = [
   { 
     path: 'media/:type', 
     loadChildren: () => import('./pages/media/media.module').then( m => m.MediaPageModule)
-  },  
+  },   {
+    path: 'describe/:type/:id',
+    loadChildren: () => import('./pages/describe/describe.module').then( m => m.DescribePageModule)
+  },
+  {
+    path: 'audio-player/:id',
+    loadChildren: () => import('./pages/audio-player/audio-player.module').then( m => m.AudioPlayerPageModule)
+  },
+ 
 ];
 
 @NgModule({

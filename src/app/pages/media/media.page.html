@@ -1,38 +1,22 @@
 <body>
   <ion-header class="flex-header" [translucent]="true">
-    <div class="flex-header-area">
-      <div class="flex-header-area_start">
-        <div class="flex-item">
-          <ion-buttons slot="secondary">
-            <div class="flex-link">
-              <div class="flex-icon-pos">
-                <ion-button routerLink="/home">
-                  <ion-icon slot="icon-only" name="home"></ion-icon>
-                </ion-button>
-              </div>
-              <a routerLink="/home">Início</a>
-            </div>
-          </ion-buttons>
-        </div>
+    <div class="flex-header-area_start">
+      <div class="flex-icon-pos">
+        <ion-icon slot="icon-only" name="home" routerLink="/home"></ion-icon>
+      </div>
+      <a class="header-text-style" routerLink="/home">Início</a>
+    </div>
+    <div class="flex-header-area_center">
+      <div class="flex-item">
+        <img class="img-logo" src="../../assets/logoOrbe.svg" />
       </div>
     </div>
-    <div class="flex-header-area">
-      <div class="flex-header-area_center">
-        <div class="flex-item">
-          <img class="img-logo" src="../../assets/logoOrbe.svg"/>
-        </div>
+    <div class="flex-header-area_end">
+      <div class="flex-item">
+        <a class="header-text-style">11:40 AM</a>
       </div>
     </div>
-    <div class="flex-header-area">
-      <div class="flex-header-area_end">
-        <div class="flex-item">
-          <ul class="menu">
-            <li><a>11:40 AM</a></li>
-          </ul>
-        </div> 
-      </div>
-    </div>
-  </ion-header>  
+  </ion-header>
   <main>
     <section class="toolbox-style">
       <div class="flex-toolbox-area">
@@ -42,511 +26,610 @@
         <div class="flex-toolbox-area_center">
           <ion-list>
             <ion-item>
-              <ion-select 
-                [interfaceOptions]="customAlertOptions" 
-                interface="popover"
-                (ionChange)="handleChange($event)"
+              <ion-select [interfaceOptions]="customAlertOptions" interface="popover" (ionChange)="handleChange($event)"
                 placeholder="Todas as categorias">
-                <ion-select-option *ngFor="let categorie of categories" [value]="categorie">{{ categorie.name }}</ion-select-option>
+                <ion-select-option *ngFor="let categorie of categories" [value]="categorie">{{ categorie.name
+                  }}</ion-select-option>
               </ion-select>
             </ion-item>
-          </ion-list>        
+          </ion-list>
         </div>
         <div class="flex-toolbox-area_end">
-          <button id="all" class="watch-button-red" routerLink="/entretenimento">Todos</button>
-          <button id="movies" class="watch-button-outline" routerLink="/media/movies">Filmes</button>
-          <button id="series" class="watch-button-outline" routerLink="/media/series">Séries</button>
-          <button id="documentaries" class="watch-button-outline" routerLink="/media/documentaries">Documentários</button>
-          <button id="music" class="watch-button-outline" routerLink="/media/music">Músicas</button>
-        </div>       
+          <button class="watch-button-outline" routerLink="/entretenimento">Todos</button>
+          <div *ngIf="type === 'movies'">
+            <button class="watch-button-red" routerLink="/media/movies">Filmes</button>
+          </div>
+          <div *ngIf="type !== 'movies'">
+            <button class="watch-button-outline" routerLink="/media/movies">Filmes</button>
+          </div>
+          <div *ngIf="type === 'series'">
+            <button class="watch-button-red" routerLink="/media/series">Séries</button>
+          </div>
+          <div *ngIf="type !== 'series'">
+            <button class="watch-button-outline" routerLink="/media/series">Séries</button>
+          </div>
+          <div *ngIf="type === 'documentaries'">
+            <button class="watch-button-red" routerLink="/media/documentaries">Documentários</button>
+          </div>
+          <div *ngIf="type !== 'documentaries'">
+            <button class="watch-button-outline" routerLink="/media/documentaries">Documentários</button>
+          </div>
+          <div *ngIf="type === 'musics'">
+            <button class="watch-button-red" routerLink="/audio-player/1">Músicas</button>
+          </div>
+          <div *ngIf="type !== 'musics'">
+            <button class="watch-button-outline" routerLink="/audio-player/1">Músicas</button>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="toolbox-style type-text-style">
+    <section class="toolbox-style toolbox-title">
       <div class="type-text-style">
         Suspense
       </div>
     </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img link-mouse">
-          <img src="../../assets/culpadasestrelas.svg" routerLink="/playback/movies/1">
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            A Culpa é das Estrelas
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
+    <div class="list-container">
+      <div class="slide-serie-left" (click)="slide_carousel('suspense',1)">
+        < </div>
+          <section id="content-suspense" class="slide-list">
+            <div class="slide-block">
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/culpadasestrelas.svg" routerLink="/describe/movies/1">
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Culpa é das Estrelas
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/barracadobeijo.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Barraca do Beijo
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/infiltrado.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Infiltrado
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/avatar.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Avatar
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/guardioesdagalaxia.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Guardiões da Galáxia
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/velosesefuriososdez.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Veloses e Furiosos
+                  </p>
+                  <p class="info-text-style">
+                    45 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/inferno.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Inferno
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/flash.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Flash
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/culpadasestrelas.svg" routerLink="/describe/movies/1">
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Culpa é das Estrelas
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/barracadobeijo.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Barraca do Beijo
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/infiltrado.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Infiltrado
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/avatar.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Avatar
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/guardioesdagalaxia.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Guardiões da Galáxia
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/velosesefuriososdez.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Veloses e Furiosos
+                  </p>
+                  <p class="info-text-style">
+                    45 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/inferno.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Inferno
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/flash.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Flash
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/culpadasestrelas.svg" routerLink="/describe/movies/1">
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Culpa é das Estrelas
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/barracadobeijo.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    A Barraca do Beijo
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/infiltrado.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Infiltrado
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/avatar.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Avatar
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/guardioesdagalaxia.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Guardiões da Galáxia
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/velosesefuriososdez.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Veloses e Furiosos
+                  </p>
+                  <p class="info-text-style">
+                    45 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/inferno.svg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Inferno
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex-item-img link-mouse">
+                  <img src="../../assets/flash.jpg" />
+                </div>
+                <div class="flex-item-txt">
+                  <p class="name-text-style">
+                    Flash
+                  </p>
+                  <p class="info-text-style">
+                    2014 - 132 min
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="slide-serie-right" (click)="slide_carousel('suspense',2)">
+            >
+          </div>
       </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/barracadobeijo.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            A Barraca do Beijo
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/infiltrado.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Infiltrado
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/avatar.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Avatar
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/guardioesdagalaxia.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Guardiões da Galáxia
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/inferno.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Inferno
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>    
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/flash.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Flash
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>  
-    </section>
-    <section class="toolbox-style type-text-style">
-      <div class="type-text-style">
-        Comédia
-      </div>
-    </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/vandinha.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Wandinha
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/blackmirror.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Black Mirror
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/jackryan.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Jack Ryan
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/thewalkingdead.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            The Walking Dead
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/simpsons.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Simpsons
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/invasaosecreta.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Invasão Secreta
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>    
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/house.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            House
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>  
-    </section>
-    <section class="toolbox-style type-text-style">
-      <div class="type-text-style">
-        Terror
-      </div>
-    </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/vandinha.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Wandinha
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/blackmirror.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Black Mirror
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/jackryan.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Jack Ryan
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/thewalkingdead.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            The Walking Dead
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/simpsons.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Simpsons
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/invasaosecreta.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Invasão Secreta
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>    
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/house.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            House
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>  
-    </section>
-    <section class="toolbox-style type-text-style">
-      <div class="type-text-style">
-        Ação
-      </div>
-    </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/vandinha.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Wandinha
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/blackmirror.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Black Mirror
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/jackryan.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Jack Ryan
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/thewalkingdead.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            The Walking Dead
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/simpsons.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Simpsons
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/invasaosecreta.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Invasão Secreta
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>    
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/house.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            House
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>  
-    </section>
-    <section class="flex-container">
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/vandinha.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Wandinha
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/blackmirror.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Black Mirror
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/jackryan.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Jack Ryan
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/thewalkingdead.svg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            The Walking Dead
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/simpsons.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Simpsons
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>      
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/invasaosecreta.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            Invasão Secreta
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>    
-      <div class="flex-format-item">
-        <div class="flex-item-img">
-          <img src="../../assets/house.jpg"/>
-        </div>
-        <div class="flex-item-txt">
-          <p class="name-text-style">
-            House
-          </p>      
-          <p class="info-text-style">
-            2014 - 132 min
-          </p>      
-        </div>
-      </div>  
-    </section>
+      <section class="toolbox-style toolbox-title">
+        <div class="type-text-style">
+          Comédia
+        </div>
+      </section>
+      <div class="list-container">
+        <div class="slide-serie-left" (click)="slide_carousel('comedia',1)">
+          < </div>
+            <section id="content-comedia" class="slide-list">
+              <div class="slide-block">
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/vandinha.svg" routerLink="/media/series" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Wandinha
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/blackmirror.svg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Black Mirror
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/jackryan.jpg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Jack Ryan
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/thewalkingdead.svg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      The Walking Dead
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/simpsons.jpg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Simpsons
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/invasaosecreta.jpg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Invasão Secreta
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/house.jpg" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      Wandinha
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+                <div class="slide-item">
+                  <div class="flex-item-img link-mouse">
+                    <img src="../../assets/vandinha.svg" routerLink="/media/series" />
+                  </div>
+                  <div class="flex-item-txt">
+                    <p class="name-text-style">
+                      House
+                    </p>
+                    <p class="info-text-style">
+                      2014 - 132 min
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="slide-serie-right" (click)="slide_carousel('comedia',2)">
+              >
+            </div>
+        </div>
+        <section class="toolbox-style toolbox-title">
+          <div class="type-text-style">
+            Terror
+          </div>
+        </section>
+        <div class="list-container">
+          <div class="slide-serie-left" (click)="slide_carousel('terror',1)">
+            < </div>
+              <section id="content-terror" class="slide-list">
+                <div class="slide-block">
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/vandinha.svg" routerLink="/media/series" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Wandinha
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/blackmirror.svg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Black Mirror
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/jackryan.jpg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Jack Ryan
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/thewalkingdead.svg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        The Walking Dead
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/simpsons.jpg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Simpsons
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/invasaosecreta.jpg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Invasão Secreta
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/house.jpg" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        Wandinha
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide-item">
+                    <div class="flex-item-img link-mouse">
+                      <img src="../../assets/vandinha.svg" routerLink="/media/series" />
+                    </div>
+                    <div class="flex-item-txt">
+                      <p class="name-text-style">
+                        House
+                      </p>
+                      <p class="info-text-style">
+                        2014 - 132 min
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="slide-serie-right" (click)="slide_carousel('terror',2)">
+                >
+              </div>
+          </div>
   </main>
 </body>
-
-

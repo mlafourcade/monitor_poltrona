@@ -65,16 +65,29 @@ export class EntretenimentoPage implements OnInit {
     },
   ];
 
-  direcao(ev: any) {
+  slide_carousel(type: string, value: any) {
+    let direcao;
+    switch(type) {
+      case 'movie':
+        direcao = document.getElementById("content-movie");
+      break;
+      case 'serie':
+        direcao = document.getElementById("content-serie");
+      break;
+      case 'music':
+        direcao = document.getElementById("content-music");
+      break;
+      default: 
+        direcao = document.getElementById("contentSlide");
+      break;
+    }
 
-    let direcao = document.getElementById("contentSlide");
-
-    if (ev === 1) {
-      direcao!.scrollLeft -= 1920;
+    if (value === 1) {
+      direcao!.scrollLeft -= 912;
       console.log('esquerda');
     }
     else {
-      direcao!.scrollLeft += 1920;
+      direcao!.scrollLeft += 912;
       console.log('direita');
     }
   }

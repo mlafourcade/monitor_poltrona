@@ -32,7 +32,7 @@ export class MediaPage implements OnInit {
       case 'documentaries':
         this.windowTitle = 'Documentários'
       break;
-      case 'music':
+      case 'musics':
         this.windowTitle = 'Músicas'
       break;
       default:
@@ -67,6 +67,33 @@ export class MediaPage implements OnInit {
     //}
     //textOrigin = this.type;
     //console.log('this.origin.changed = ', textOrigin);
+  }
+
+  slide_carousel(type: string, value: any) {
+    let direcao;
+    switch(type) {
+      case 'suspense':
+        direcao = document.getElementById("content-suspense");
+      break;
+      case 'comedia':
+        direcao = document.getElementById("content-comedia");
+      break;
+      case 'terror':
+        direcao = document.getElementById("content-terror");
+      break;
+      default: 
+        direcao = document.getElementById("contentSlide");
+      break;
+    }
+
+    if (value === 1) {
+      direcao!.scrollLeft -= 912;
+      console.log('esquerda');
+    }
+    else {
+      direcao!.scrollLeft += 912;
+      console.log('direita');
+    }
   }
 
   customAlertOptions = {
