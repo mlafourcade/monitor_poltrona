@@ -1,0 +1,1284 @@
+<body>
+  <ion-header class="flex-header" [translucent]="true">
+    <div class="flex-header-area_start">
+      <div class="flex-icon-pos">
+        <ion-icon (click)='botaoVoltar()' slot="icon-only" name="arrow-undo"></ion-icon>
+      </div>
+      <a class="font-orbe0 link-mouse" (click)='botaoVoltar()'>Voltar</a>            
+    </div>
+    <div class="flex-header-area_center">
+      <div class="flex-item">
+        <img class="img-logo" src="../../assets/logoOrbe.svg"/>
+      </div>
+    </div>
+    <div class="flex-header-area_end">
+      <div class="flex-item">
+        <a class="header-text-style">11:40 AM</a>
+      </div> 
+    </div>
+  </ion-header>  
+  <main>
+    <div id="describe-container">
+      <div class="flex-describe-item">
+        <div class="flex-describe-item-left">
+          <h1 class="font-orbe1 flex-text-description">Wandinha</h1>
+          <h2 class="font-orbe2 flex-text-description">
+            Lorem ipsum dolor sit amet consectetur. Arcu mi condimentum integer quis massa. Egestas egestas sed sed mauris euismod diam. Imperdiet egestas in nulla phasellus. Augue ut purus erat molestie molestie laoreet  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <span id="pontos">...</span>
+            <span id="mais" style="display: none;">
+              Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
+              Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
+              Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
+              <!-- Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
+              Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
+            </span>
+            <button class="font-orbe3" (click)='vermais()' id="btnVerMais">Ver Mais</button>
+          </h2>
+          <h1 class="font-orbe4">___</h1>
+          <div class="flex-watch">
+            <ion-icon name="film" class="flex-watch-icon"></ion-icon>
+            <h2 class="flex-watch-text">
+              Drama
+            </h2>
+            <ion-icon name="time-outline" class="flex-watch-icon"></ion-icon>
+            <h2 class="flex-watch-text">
+              132 min
+            </h2>
+            <ion-icon name="calendar-outline" class="flex-watch-icon"></ion-icon>
+            <h2 class="flex-watch-text">
+              2014
+            </h2>
+          </div>
+          <button class="watch-button">Assistir todos episódios</button>
+        </div>
+        <div class="flex-describe-item-right">
+          <img class="flex-img-description" src="../../assets/vandinha.svg"/>
+        </div>
+      </div>
+    </div>
+    <hr color="#000">
+    <div class="season-information">
+      <button class="season-button-format gray-button" (click)="hideSeason(1)">
+        <div class="season-button-text">
+          <div>1ª Temporada</div>
+          <div class="button-text-end">
+            <div>6 episódios</div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </button>      
+      <div id="season1" class="episodes-format">
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 1 -</p>
+              <p class="font-orbe7">O Mundo</p>
+            </div>
+            <p class="font-orbe6">2016 * 42min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(1)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen1">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 1 -</p>
+                          <p class="font-orbe7 back-color">O Mundo</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 2 -</p>
+              <p class="font-orbe7">Tecnologias</p>
+            </div>
+            <p class="font-orbe6">2016 * 48min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(2)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen2">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 2 -</p>
+                          <p class="font-orbe7 back-color">Tecnologias</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 3 -</p>
+              <p class="font-orbe7">O Crime</p>
+            </div>
+            <p class="font-orbe6">2016 * 53min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(3)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen3">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 3 -</p>
+                          <p class="font-orbe7 back-color">O Crime</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>          
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 4 -</p>
+              <p class="font-orbe7">O Despertar</p>
+            </div>
+            <p class="font-orbe6">2016 * 54min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(4)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen4">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 4 -</p>
+                          <p class="font-orbe7 back-color">O Despertar</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 5 -</p>
+              <p class="font-orbe7">Incrível</p>
+            </div>
+            <p class="font-orbe6">2016 * 31min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(5)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen5">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 5 -</p>
+                          <p class="font-orbe7 back-color">Incrível</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3641.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 6 -</p>
+              <p class="font-orbe7">Satisfação</p>
+            </div>
+            <p class="font-orbe6">2016 * 39min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(6)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen6">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3641.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 6 -</p>
+                          <p class="font-orbe7 back-color">Satisfação</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+      </div>
+      <button class="season-button-format gray-button" (click)="hideSeason(2)">
+        <div class="season-button-text">
+          <div>2ª Temporada</div>
+          <div class="button-text-end">
+            <div>4 episódios</div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </button>
+      <div id="season2" class="episodes-format">
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 1 -</p>
+              <p class="font-orbe7">O Mundo</p>
+            </div>
+            <p class="font-orbe6">2016 * 42min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(1)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen1">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 1 -</p>
+                          <p class="font-orbe7 back-color">O Mundo</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 2 -</p>
+              <p class="font-orbe7">Tecnologias</p>
+            </div>
+            <p class="font-orbe6">2016 * 48min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(2)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen2">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 2 -</p>
+                          <p class="font-orbe7 back-color">Tecnologias</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 3 -</p>
+              <p class="font-orbe7">O Crime</p>
+            </div>
+            <p class="font-orbe6">2016 * 53min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(3)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen3">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 3 -</p>
+                          <p class="font-orbe7 back-color">O Crime</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>          
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 4 -</p>
+              <p class="font-orbe7">O Despertar</p>
+            </div>
+            <p class="font-orbe6">2016 * 54min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(4)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen4">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 4 -</p>
+                          <p class="font-orbe7 back-color">O Despertar</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+      </div>
+      <button class="season-button-format gray-button" (click)="hideSeason(3)">
+        <div class="season-button-text">
+          <div>3ª Temporada</div>
+          <div class="button-text-end">
+            <div>6 episódios</div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </button>
+      <div id="season3" class="episodes-format">
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 1 -</p>
+              <p class="font-orbe7">O Mundo</p>
+            </div>
+            <p class="font-orbe6">2016 * 42min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(1)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen1">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 1 -</p>
+                          <p class="font-orbe7 back-color">O Mundo</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 2 -</p>
+              <p class="font-orbe7">Tecnologias</p>
+            </div>
+            <p class="font-orbe6">2016 * 48min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(2)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen2">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 2 -</p>
+                          <p class="font-orbe7 back-color">Tecnologias</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 3 -</p>
+              <p class="font-orbe7">O Crime</p>
+            </div>
+            <p class="font-orbe6">2016 * 53min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(3)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen3">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 3 -</p>
+                          <p class="font-orbe7 back-color">O Crime</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>          
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 4 -</p>
+              <p class="font-orbe7">O Despertar</p>
+            </div>
+            <p class="font-orbe6">2016 * 54min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(4)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen4">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 4 -</p>
+                          <p class="font-orbe7 back-color">O Despertar</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 5 -</p>
+              <p class="font-orbe7">Incrível</p>
+            </div>
+            <p class="font-orbe6">2016 * 31min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(5)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen5">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 5 -</p>
+                          <p class="font-orbe7 back-color">Incrível</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3641.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 6 -</p>
+              <p class="font-orbe7">Satisfação</p>
+            </div>
+            <p class="font-orbe6">2016 * 39min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(6)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen6">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3641.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 6 -</p>
+                          <p class="font-orbe7 back-color">Satisfação</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+      </div>
+      <button class="season-button-format gray-button" (click)="hideSeason(4)">
+        <div class="season-button-text">
+          <div>4ª Temporada</div>
+          <div class="button-text-end">
+            <div>5 episódios</div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </button>
+      <div id="season4" class="episodes-format">
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 1 -</p>
+              <p class="font-orbe7">O Mundo</p>
+            </div>
+            <p class="font-orbe6">2016 * 42min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(1)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen1">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 1 -</p>
+                          <p class="font-orbe7 back-color">O Mundo</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 2 -</p>
+              <p class="font-orbe7">Tecnologias</p>
+            </div>
+            <p class="font-orbe6">2016 * 48min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(2)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen2">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 2 -</p>
+                          <p class="font-orbe7 back-color">Tecnologias</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 3 -</p>
+              <p class="font-orbe7">O Crime</p>
+            </div>
+            <p class="font-orbe6">2016 * 53min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(3)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen3">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 3 -</p>
+                          <p class="font-orbe7 back-color">O Crime</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>          
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 4 -</p>
+              <p class="font-orbe7">O Despertar</p>
+            </div>
+            <p class="font-orbe6">2016 * 54min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(4)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen4">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3639.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 4 -</p>
+                          <p class="font-orbe7 back-color">O Despertar</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 5 -</p>
+              <p class="font-orbe7">Incrível</p>
+            </div>
+            <p class="font-orbe6">2016 * 31min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(5)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen5">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3640.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 5 -</p>
+                          <p class="font-orbe7 back-color">Incrível</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+      </div>
+      <button class="season-button-format gray-button" (click)="hideSeason(5)">
+        <div class="season-button-text">
+          <div>5ª Temporada</div>
+          <div class="button-text-end">
+            <div>3 episódios</div>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+      </button>
+      <div id="season5" class="episodes-format">
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 1 -</p>
+              <p class="font-orbe7">O Mundo</p>
+            </div>
+            <p class="font-orbe6">2016 * 42min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(1)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen1">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 1 -</p>
+                          <p class="font-orbe7 back-color">O Mundo</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 2 -</p>
+              <p class="font-orbe7">Tecnologias</p>
+            </div>
+            <p class="font-orbe6">2016 * 48min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(2)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen2">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3637.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 2 -</p>
+                          <p class="font-orbe7 back-color">Tecnologias</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+        <div class="episode-information">
+          <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+          <div class="episode-text">
+            <div class="episode-name">
+              <p class="font-orbe8">Episódio 3 -</p>
+              <p class="font-orbe7">O Crime</p>
+            </div>
+            <p class="font-orbe6">2016 * 53min</p>
+            <p class="font-orbe5 link-mouse" (click)="setOpen(3)">Ver sinopse</p>
+            <ion-modal [isOpen]="isModalOpen3">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <div class="popup-information">
+                      <img class="episode-img" src="../../assets/Rectangle 3638.png"/>
+                      <div class="episode-text">
+                        <p class="font-orbe1 back-color">Wandinha</p>
+                        <div class="episode-name">
+                          <p class="font-orbe8 back-color">Episódio 3 -</p>
+                          <p class="font-orbe7 back-color">O Crime</p>
+                        </div>
+                        <p class="font-orbe6 back-color">2016 * 42min</p>
+                      </div>
+                      <ion-buttons slot="end">
+                        <ion-icon class="close-icon-pos" name="close-circle-outline" (click)="setOpen(0)"></ion-icon>
+                      </ion-buttons>
+                    </div>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <section class="section-text">
+                    <p class="back-color">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta. Mit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                      dicta consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                      reprehenderit. 
+                    </p>
+                  </section>
+                  <section class="section-button">
+                    <button class="watch-button">Assistir episódio</button>
+                  </section>
+                </ion-content>
+              </ng-template>
+            </ion-modal>          
+          </div>
+          <ion-icon class="play-icon-pos" name="play-circle-sharp"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>

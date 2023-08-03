@@ -1,0 +1,374 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;   //Tira a bolinha do inicio do item da lista
+    font-size: 1.2rem;
+    font-family: Arial;
+    background-color: #272626;
+}
+main {
+    max-width: 1024px;
+    height: 560px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+#describe-container::-webkit-scrollbar {
+    display: none;
+}
+$font_orbe0: 500 1em "Roboto", Bold, Helvetica, sans-serif;
+.font-orbe0 {
+    font: $font_orbe0;    
+    text-align: center;
+    text-decoration: none;  //Links sublinhados
+    color: whitesmoke;
+}
+$font_orbe1: 700 1.3em "Roboto", Bold, Helvetica, sans-serif;
+.font-orbe1 {
+    font: $font_orbe1;    
+    text-align: left;
+    text-decoration: none;  //Links sublinhados
+    color: whitesmoke;
+}
+$font_orbe2: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.font-orbe2 {
+    font: $font_orbe2;    
+    text-align: left;
+    text-decoration: none;  //Links sublinhados
+    color: whitesmoke;
+}
+.font-orbe3 {
+    font: $font_orbe0;    
+    text-align: right;
+    color: #F5400E;
+    background-color: #272626;
+}
+.font-orbe4 {
+    font: $font_orbe0;  
+    margin: 0px;  
+    padding: 0;
+    text-align: left;
+    color: #F5400E;
+}
+$font_orbe3: 500 0.8em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.font-orbe5 {
+    font: $font_orbe3;  
+    text-align: left;
+    color: #F5400E;
+}
+$font_orbe3: 400 12px "Roboto", 'Arial Narrow', Arial, sans-serif;
+.font-orbe6 {
+    font: $font_orbe3;  
+    text-align: left;
+    color: whitesmoke;
+}
+$font_orbe4: 400 16px "Roboto", 'Arial Narrow', Arial, sans-serif;
+.font-orbe7 {
+    font: $font_orbe4;  
+    text-align: left;
+    color: whitesmoke;
+}
+$font_orbe5: 700 16px "Roboto", 'Arial Narrow', Arial, sans-serif;
+.font-orbe8 {
+    font: $font_orbe5;  
+    text-align: left;
+    color: whitesmoke;
+}
+#describe-container {
+    display: flex;
+    padding-left: 0px;
+    width: 100%;
+    height: 320px;
+    justify-content: center;
+    align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.flex-describe-item {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.flex-describe-item-right {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-right: 60px;
+    margin-left: 60px;
+    height: max-content;
+    width: 400px;
+    //border: 1px solid #fff;
+    //background-color: #447;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.flex-describe-item-left {
+    margin-top: 30px;
+    margin-bottom: 60px; 
+    margin-right: 30px;
+    margin-left: 40px;
+    height: max-content;
+    width: 400px;
+    //border: 1px solid #fff;
+    //background-color: #447;
+    display: block;
+}
+.flex-img-description {
+    border-radius: 5%;
+    width: 180px;
+}
+.flex-text-description {
+    //border: 1px solid #fff;
+    margin-top: 0;
+    display: block;
+}
+.flex-watch {
+    display: flex;
+    //border: 1px solid #fff;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-watch-text {
+    font: $font_orbe2;    
+    text-align: left;
+    color: whitesmoke;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-bottom: 18px;
+}
+.flex-watch-icon {
+    color: whitesmoke;   
+}
+.link-mouse {
+    cursor: pointer; //coloca o objeto de seleção no mouse
+    user-select: none;
+}
+
+/******** header ********/
+.flex-header {
+    height: 40px;
+    //border: 1px solid #fff;
+    display: flex;
+    flex-flow: row nowrap; //flex-direction + flex-wrap
+    max-width: 1024px;
+}
+
+.flex-header-area_start {
+    //border: 1px solid #fff;
+    padding-left: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.flex-header-area_center {
+    //border: 1px solid #fff;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-header-area_end {
+    //border: 1px solid #fff;
+    padding-right: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0px;
+}
+
+$header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
+.header-text-style {
+    text-decoration: none; //Links sublinhados
+    color: whitesmoke;
+    font: $header_font_type;
+    text-align: center;
+}
+
+.flex-icon-pos {
+    padding-top: 6px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.flex-item {
+    color: white;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.img-logo {
+    width: 80px;
+    display: block;
+}
+
+/******** Buttons ********/
+.flex-buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
+    gap: 20px;
+}
+
+.watch-button {
+    background-color: #F5400E;
+    border-radius: 15px;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.watch-button-red {
+    background-color: #F5400E;
+    border-radius: 15px;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.watch-button-outline {
+    background-color: #272626;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/******** Temporadas ********/
+.season-information {
+    //border: 1px solid #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.episodes-format {
+    //border: 1px solid #fff;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+.episode-information {
+    //border: 1px solid #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.popup-information {
+    //border: 1px solid #fff;
+    height: 130px;
+    display: flex;
+    padding-left: 30px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.episode-video {
+    border: 1px solid #fff;
+    display: inline-flex;
+}
+.episode-text {
+    //border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding-left: 10px;
+    gap: 10px;
+}
+.episode-img {
+    z-index: 0;
+}
+.play-icon-pos {
+    color: whitesmoke;
+    position: relative;
+    left: -480px;
+    font-size: 50px;
+     cursor: pointer;
+}
+.episode-name{
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+ion-modal {
+    --height: 50%;
+    --width: 600px;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+ion-modal ion-toolbar {
+    --background: #414141;
+    --color: white;
+}
+ion-modal::part(backdrop) {
+    background: #1b1a1a;
+    opacity: 1;
+}
+.back-color {
+    background-color: #414141;
+}
+.close-icon-pos {
+    color: whitesmoke;
+    position: relative;
+    top: -10px;
+    left: -20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+.section-button {
+    //border: 1px solid #fff;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.season-button-format {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align:left;
+    font-size: 16px;
+    cursor: pointer;
+}
+.gray-button {
+    background-color: #767676;
+}
+.red-button {
+    background-color: #F5400E;
+}
+.season-button-text {
+    //border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.button-text-end {
+    display: flex;
+    padding-right: 30px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}

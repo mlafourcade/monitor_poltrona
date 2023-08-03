@@ -11,11 +11,33 @@ main {
     overflow-y: auto;
     max-width: 1024px;
     height: 560px;
-    padding-left: 40px;
 }
 main::-webkit-scrollbar {
     display: none;
 }
+
+/******** text font ********/
+$font_orbe_00: 700 34px "Roboto", Bold, Helvetica, sans-serif;
+.artist-name-font {
+    font: $font_orbe_00;    
+    color: whitesmoke;
+}
+$font_orbe_01: 400 14px "Roboto", Bold, Helvetica, sans-serif;
+.album-describe-font {
+    font: $font_orbe_01;    
+    text-align: left;
+    text-decoration: none;  
+    color: whitesmoke;
+}
+$font_orbe_02: 600 14px "Roboto", Bold, Helvetica, sans-serif;
+.audio-title-font {
+    font: $font_orbe_02;    
+    text-align: left;
+    text-decoration: none;  
+    color: whitesmoke;
+}
+
+
 $font_orbe0: 500 1em "Roboto", Bold, Helvetica, sans-serif;
 .font-orbe0 {
     font: $font_orbe0;    
@@ -52,80 +74,8 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     text-align: left;
     color: #F5400E;
 }
-.flex-main-container {
-    //border: 1px solid #fff;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: stretch;
-}
-.flex-main-item {
-    //border: 1px solid #fff;
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-.flex-main-item-right {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-right: 60px;
-    margin-left: 30px;
-    height: 400px;
-    width: 400px;
-    //border: 1px solid #fff;
-    //background-color: #447;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-}
-.flex-main-item-left {
-    margin-top: 60px;
-    margin-bottom: 60px; 
-    margin-right: 30px;
-    margin-left: 60px;
-    height: 400px;
-    width: 400px;
-    //border: 1px solid #fff;
-    //background-color: #447;
-    display: block;
-}
-.flex-img-description {
-    border-radius: 5%;
-    width: 260px;
-}
-.flex-text-description {
-    //border: 1px solid #fff;
-    margin-top: 0;
-    display: block;
-}
-.flex-watch {
-    display: flex;
-    //border: 1px solid #fff;
-    justify-content: flex-start;
-    align-items: center;
-}
-.flex-watch-text {
-    font: $font_orbe2;    
-    text-align: left;
-    color: whitesmoke;
-    margin-left: 5px;
-    margin-right: 15px;
-    margin-bottom: 18px;
-}
-.flex-watch-icon {
-    color: whitesmoke;   
-}
-.watch-button {
-  background-color: #F5400E;
-  border-radius: 15px;
-  color: white;
-  padding: 15px 50px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
+/******** support ********/
 .link-mouse {
     cursor: pointer; //coloca o objeto de seleção no mouse
     user-select: none;
@@ -139,7 +89,6 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     flex-flow: row nowrap; //flex-direction + flex-wrap
     max-width: 1024px;
 }
-
 .flex-header-area_start {
     //border: 1px solid #fff;
     padding-left: 40px;
@@ -149,7 +98,6 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     align-items: center;
     margin-left: 0px;
 }
-
 .flex-header-area_center {
     //border: 1px solid #fff;
     display: flex;
@@ -157,7 +105,6 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     justify-content: center;
     align-items: center;
 }
-
 .flex-header-area_end {
     //border: 1px solid #fff;
     padding-right: 40px;
@@ -167,7 +114,6 @@ $font_orbe4: 500 0.7em "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial
     align-items: center;
     margin-right: 0px;
 }
-
 $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
 .header-text-style {
     text-decoration: none; //Links sublinhados
@@ -175,7 +121,6 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     font: $header_font_type;
     text-align: center;
 }
-
 .flex-icon-pos {
     padding-top: 6px;
     padding-bottom: 5px;
@@ -184,15 +129,271 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     font-size: 20px;
     cursor: pointer;
 }
-
 .flex-item {
     color: white;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
-
 .img-logo {
     width: 80px;
     display: block;
+}
+
+/******** main area ********/
+.flex-main-container {
+    //border: 1px solid #fff;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+.flex-main-item-left {
+    height: 560px;
+    width: 70%;
+    //border: 1px solid #fff;
+    //background-color: #447;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.flex-main-item-right {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 560px;
+    width: 30%;
+    padding: 20px;
+    //border: 1px solid #fff;
+    //background-color: #447;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/******** audio list area ********/
+.container-audio-list {
+    //border: 1px solid #fff;
+    display: block;
+    border-radius: 20px;
+    background-color: #1A1919;
+    flex: 1 1 auto;
+}
+
+/******** flex-itens ********/
+.item-artist-text {
+    //border: 1px solid #fff;
+    padding: 20px;
+    width: 100%;
+    height: 20%;
+}
+.item-audio-list {
+    //border: 1px solid #fff;
+    overflow-x: hidden;
+    overflow-y: auto;    
+    padding-left: 20px;
+    width: 100%;
+    height: 80%;
+}
+/****************************/
+
+.audio-artist-name {
+    //border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    height: 70%;
+}
+.album-describe {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    height: 30%;
+}
+.aldio-icon-style {
+    color: whitesmoke;
+    font-size: 20px;
+}
+.aldio-container {
+    //border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.play-icon-style {
+    color: whitesmoke;
+    font-size: 50px;
+    text-align: left;
+}
+.pause-icon-style {
+    color: #F5400E;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 44px;
+    margin: 4px;
+    text-align: left;
+}
+.play-icon-item {
+    //border: 1px solid #fff;
+    flex: 0 1 auto;
+}
+.aldio-text-container {
+    //border: 1px solid #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.progress-container {
+    //border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+}
+
+/******** audio display area ********/
+.volume-container {
+    //border: 1px solid #fff;
+    display: flex;
+    align-items: flex-end;
+    width: 20%;
+    height: 100%;
+}
+.volume-item > ion-range {
+    --bar-background: #767676;
+    --bar-background-active: whitesmoke;
+    --bar-height: 8px;
+    --bar-border-radius: 8px;
+     --knob-background: whitesmoke;
+    --knob-size: 40px;
+    --pin-background: whitesmoke;
+    --pin-color: whitesmoke;
+}
+.volume-bar-container{
+    //border: 1px solid #fff;
+    position: relative;
+    width: 300px;
+    height: 20%;
+    top: 100px;
+    left: 150px;
+    display: flex;
+    padding-right: 50px;
+    transform: translate(-50%,-50%) rotate(-90deg);
+}
+.volume-bar-container > ion-range {
+    --bar-background: #767676;
+    --bar-background-active: whitesmoke;
+    --bar-height: 8px;
+    --bar-border-radius: 8px;
+    --knob-background: whitesmoke;
+    --knob-size: 40px;
+    --pin-background: whitesmoke;
+    --pin-color: whitesmoke;
+}
+.volume-bar-custon {
+    appearance: none;
+    width: 150px;
+    height: 10px;
+    background-color: #767676;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+//https://www.youtube.com/watch?v=BrpiNUf2XCk
+.slider {
+    background: #767676;
+    outline: none;
+    opacity: 0.7;
+}
+.volume-item {
+    //border: 1px solid #fff;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.volume-icon {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    border-width: 3px;
+    padding: 5px;
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+
+.player-container {
+    //border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    height: 100%;
+}
+.player-img-container {
+    //border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+.player-img-item {
+    border-radius: 20px;
+    width: 290px;
+}
+.player-text-description {
+    //border: 1px solid #fff;
+    height: 10%;
+    width: 100%;
+}
+.player-status-bar-container {
+    //border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 10%;
+    width: 100%;
+}
+.player-status-bar-item {
+    //border: 1px solid #fff;
+    height: 100%;
+    width: 100%;
+}
+.player-status-bar-item > ion-range {
+    --bar-background: #767676;
+    --bar-background-active: #F5400E;
+    --bar-height: 8px;
+    --bar-border-radius: 8px;
+    --knob-background: #F5400E;
+    --knob-size: 40px;
+    --pin-background: #F5400E;
+    --pin-color: #F5400E;
+}
+.player-icons-container {
+    //border: 1px solid #fff;
+    color: whitesmoke;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 10%;
+    width: 100%;
+}
+// .player-icons-container > ion-icon {
+// }
+.player-pause-icon-style {
+    color: #F5400E;
 }

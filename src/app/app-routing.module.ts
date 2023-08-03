@@ -42,6 +42,16 @@ const routes: Routes = [
     path: 'audio-player/:id',
     loadChildren: () => import('./pages/audio-player/audio-player.module').then( m => m.AudioPlayerPageModule)
   },
+  {
+    path: 'serie-describe/:season/:id',
+    loadChildren: () => import('./pages/serie-describe/serie-describe.module').then( m => m.SerieDescribePageModule)
+  },
+  {
+    path: 'season/:number/:id',
+    loadChildren: () => import('./pages/season/season.module').then( m => m.SeasonPageModule)
+  },
+
+
  
 ];
 
