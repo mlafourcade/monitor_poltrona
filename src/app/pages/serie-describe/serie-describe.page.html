@@ -67,7 +67,7 @@
       </div>
       <div class="episodes-format">
         <div class="episode-information">
-          <img class="episode-img" src="../../assets/Rectangle 3636.png"/>
+          <img class="episode-img link-mouse" src="../../assets/Rectangle 3636.png" routerLink="/playback/series/1"/>
           <div class="episode-text">
             <div class="episode-name">
               <p class="font-orbe8">Episódio 1 -</p>
@@ -105,13 +105,13 @@
                     </p>
                   </section>
                   <section class="section-button">
-                    <button class="watch-button">Assistir episódio</button>
+                    <button class="watch-button" (click)="setOpen(0)">Assistir episódio</button>
                   </section>
                 </ion-content>
               </ng-template>
             </ion-modal>
           </div>
-          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp"></ion-icon>
+          <ion-icon class="play-icon-pos" name="caret-forward-circle-sharp" routerLink="/playback/series/1"></ion-icon>
         </div>
         <div class="episode-information">
           <img class="episode-img" src="../../assets/Rectangle 3637.png"/>

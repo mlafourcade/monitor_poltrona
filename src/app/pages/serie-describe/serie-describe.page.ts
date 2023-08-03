@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, AnimationController, ModalController } from '@ionic/angular';
 
 @Component({
@@ -12,13 +12,15 @@ export class SerieDescribePage implements OnInit {
 
   season: string | null = '';
   public alertButtons = ['OK'];
+  gotopage = false;
   message = 'This modal example uses the modalController to present and dismiss modals.';
 
   constructor(
     private route: ActivatedRoute,
     private alertController: AlertController,
     private animationCtrl: AnimationController,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private router: Router,
   ) { }
 
   // enterAnimation = (baseEl: HTMLElement) => {
@@ -87,6 +89,9 @@ export class SerieDescribePage implements OnInit {
   isModalOpen6 = false;
 
   setOpen(isOpen: number) {
+
+    console.log("isOpen = ", isOpen)
+
     switch(isOpen) {
       case 0:
         this.isModalOpen1 = false;
@@ -113,6 +118,17 @@ export class SerieDescribePage implements OnInit {
       break;
       case 6:
         this.isModalOpen6 = true;
+      break;
+      case 99:
+        this.isModalOpen1 = false;
+        this.isModalOpen2 = false;
+        this.isModalOpen3 = false;
+        this.isModalOpen4 = false;
+        this.isModalOpen5 = false;
+        this.isModalOpen6 = false;
+        //this.router.navigateByUrl('/playback/series/1');
+      break;
+      default:
       break;
     }
   }

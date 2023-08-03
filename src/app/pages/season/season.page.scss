@@ -320,9 +320,9 @@ ion-modal ion-toolbar {
     --background: #414141;
     --color: white;
 }
-ion-modal::part(backdrop) {
-    background: #1b1a1a;
-    opacity: 1;
+ion-modal ion-content {
+    --background: #414141;
+    --color: white;   
 }
 .back-color {
     background-color: #414141;
@@ -340,7 +340,7 @@ ion-modal::part(backdrop) {
     margin-top: 60px;
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
 }
 .season-button-format {
     margin-bottom: 15px;

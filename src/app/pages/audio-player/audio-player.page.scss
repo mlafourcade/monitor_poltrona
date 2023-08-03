@@ -36,7 +36,20 @@ $font_orbe_02: 600 14px "Roboto", Bold, Helvetica, sans-serif;
     text-decoration: none;  
     color: whitesmoke;
 }
-
+$font_orbe_03: 600 18px "Roboto", Bold, Helvetica, sans-serif;
+.album-title-font {
+    font: $font_orbe_03;    
+    text-align: left;
+    text-decoration: none;  
+    color: whitesmoke;
+}
+$font_orbe_04: 400 14px "Roboto", Bold, Helvetica, sans-serif;
+.artist-title-font {
+    font: $font_orbe_04;    
+    text-align: left;
+    text-decoration: none;  
+    color: whitesmoke;
+}
 
 $font_orbe0: 500 1em "Roboto", Bold, Helvetica, sans-serif;
 .font-orbe0 {
@@ -312,7 +325,7 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
 .volume-item {
     //border: 1px solid #fff;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -321,13 +334,12 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
 }
 .volume-icon {
     border: 1px solid #fff;
-    border-radius: 30px;
+    border-radius: 50%;
     border-width: 3px;
     padding: 5px;
     color: whitesmoke;
     font-size: 40px;
 }
-
 
 .player-container {
     //border: 1px solid #fff;
@@ -344,7 +356,7 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 60%;
     width: 100%;
 }
 .player-img-item {
@@ -353,6 +365,12 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
 }
 .player-text-description {
     //border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    gap: 5px;
     height: 10%;
     width: 100%;
 }
@@ -361,9 +379,10 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 10%;
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 15%;
     width: 100%;
 }
 .player-status-bar-item {
@@ -388,12 +407,13 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     height: 10%;
     width: 100%;
 }
 // .player-icons-container > ion-icon {
 // }
 .player-pause-icon-style {
+    font-size: 65px;
     color: #F5400E;
 }
