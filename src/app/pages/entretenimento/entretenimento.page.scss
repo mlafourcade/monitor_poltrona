@@ -115,14 +115,7 @@ $header_font_type: 600 16px "Roboto", Helvetica, Arial, serif;
     justify-content: flex-start;
     align-items: center;
 }
-$font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
-.flex-toolbox-area_center {
-    //border: 1px solid #fff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font: $font_type_5;
-}
+
 .flex-toolbox-area_end {
     //border: 1px solid #fff;
     display: flex;
@@ -228,19 +221,39 @@ $font_type_4: 600 12px "Roboto", Helvetica, Bold, serif;
     font: $font_type_4;
     color: #fff;
 }
+$font_type_5: 400 12px/1.17 "Roboto", Helvetica, Arial, serif;
+.flex-toolbox-area_center {
+    //border: 1px solid #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font: $font_type_5;
+}
 $font_type_6: 400 14px/1.17 "Roboto", Helvetica, Bold, serif;
 .select-box-text {
     cursor: pointer;    //coloca o objeto de seleção no mouse
+}
+$font_type_7: 6000 24px/1.17 "Roboto", Helvetica, Bold, serif;
+.company-text-font {
+    color: white;
+    text-align: left;
+    font: $font_type_7;
 }
 .link-mouse {
     cursor: pointer;    //coloca o objeto de seleção no mouse
     user-select:none;
 }
+.flex-logo-container {
+    //border: 1px solid #fff;
+    position: relative;
+    padding: 10px;
+    top: -190px;
+    left: 40px;
+    width: 260px;
+}
 .flex-logo-position {
     width: 150px;
-    position: relative;
-    bottom: 128px;
-    left: -900px;
+    padding-bottom: 15px;
     overflow: 'hidden';
 }
 
