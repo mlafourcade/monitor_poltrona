@@ -81,9 +81,9 @@ export class SeasonPage implements OnInit {
   }
 
   vermais() {
-    let maisTexto = document.getElementById("mais");
-    let pontos = document.getElementById("pontos");
-    let btnVermais = document.getElementById("btnVerMais");
+    let maisTexto = document.getElementById("season-mais");
+    let pontos = document.getElementById("season-pontos");
+    let btnVermais = document.getElementById("season-btnVerMais");
 
     if ( (pontos !== null) && (maisTexto !== null) && (btnVermais !== null) ) {
       if (maisTexto.style.display === "none") {
