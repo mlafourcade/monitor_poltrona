@@ -25,6 +25,23 @@ export class AudioPlayerPage implements OnInit {
   }
 
   ngOnInit() {
+
+    let slideValue = document.getElementById("customRange");
+    if (slideValue != null) {
+
+      // let outputValue = document.getElementById("value");
+      // outputValue!.innerHTML = (slideValue as HTMLInputElement).value;
+      // slideValue.oninput = function () {
+      //   let x = (slideValue as HTMLInputElement).value;
+      //   outputValue!.innerHTML = x+'%';
+      // }
+
+      slideValue.addEventListener("mousemove", ()=>{
+        let x = (slideValue as HTMLInputElement).value;
+        let color = 'linear-gradient(90deg, whitesmoke '+x+'%, #767676 '+x+'%)'
+        slideValue!.style.background = color;
+      })
+    }
   }
 
   
