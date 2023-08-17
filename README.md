@@ -7,6 +7,9 @@ Ele organiza os arquivos por:
   classificação: Kids/Adult
 Desenvolvimento de projeto utilizando as tecnologias: typescript, angular, Ionic, capacitor.
 
+![Ionic App](https://github.com/mlafourcade/monitor_poltrona/assets/28298809/26ef0118-71c9-4006-a5e1-a02c21154710)
+
+
 
 
 
